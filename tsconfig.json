@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "target": "ES6",
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "src",
+    "components/accommodation-rules-section.tsx",
+    "components/card-table.tsx",
+    "components/about-section.tsx",
+    "components/benefits-section.tsx",
+    "components/contact-section.tsx",
+    "components/expandable-image.tsx",
+    "components/footer.tsx",
+    "components/header.tsx",
+    "components/hero-section.tsx",
+    "components/lang-switcher.tsx",
+    "components/properties-section.tsx",
+    "components/accommodation-page.tsx",
+    "components/ui/button.tsx",
+    "lib",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules"]
+}

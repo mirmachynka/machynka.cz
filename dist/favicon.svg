@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.336214mm" height="14.10208mm" viewBox="0 0 25.336214 14.10208">
+  <style>
+    .mark { fill: #0f0f0f; stroke: #0f0f0f; }
+
+    @media (prefers-color-scheme: dark) {
+      .mark { fill: #f4f4f4; stroke: #f4f4f4; }
+    }
+  </style>
+  <g transform="translate(-55.090691,-140.22527)">
+    <text
+      class="mark"
+      xml:space="preserve"
+      style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:20.8994px;font-family:'Inter 18pt', Inter, Arial, sans-serif;writing-mode:lr-tb;direction:ltr;stroke-width:0"
+      x="118.0369"
+      y="166.39861"
+      transform="matrix(1.0782186,0,-0.44117696,0.92745572,0,0)"
+    >M</text>
+  </g>
+</svg>
