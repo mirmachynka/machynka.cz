@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight, Building2, Clock, MapPin, Phone, ReceiptText } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
-import { AccommodationRulesSection, type AccommodationRule } from "@/components/accommodation-rules-section"
+import { AccommodationRulesSection, type AccommodationRule } from "@/components/accommodation/rules-section"
 import { CardTable } from "@/components/card-table"
 import { ExpandableImage } from "@/components/expandable-image"
 import { GoogleMapEmbed } from "@/components/google-map-embed"
@@ -115,18 +115,23 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
             </h2>
           </div>
 
-          <div className="grid gap-px bg-neutral-200 sm:grid-cols-2">
-            {accommodation.features.map((feature, index) => (
-              <div key={index} className="bg-white p-8">
+          <CardTable
+            items={accommodation.features}
+            columns={2}
+            breakpoint="sm"
+            getKey={(feature, index) => featureLabels[index] ?? feature.label}
+            itemClassName="p-8"
+            renderItem={(feature, index) => (
+              <>
                 <div className="mb-6 flex h-14 w-14 items-center justify-center bg-neutral-100">
                   <feature.icon className="h-6 w-6 text-neutral-900" />
                 </div>
                 <h3 className="text-lg font-black uppercase tracking-tight text-neutral-900">
                   {featureLabels[index]}
                 </h3>
-              </div>
-            ))}
-          </div>
+              </>
+            )}
+          />
         </div>
       </section>
 

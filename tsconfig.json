@@ -1,24 +1,118 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "target": "ES6",
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": [
+        "./*"
+      ],
+      "#21jt6f6rfpio": [
+        "./components/lang-switcher.tsx"
+      ],
+      "#29xjkjqfmplv": [
+        "./tb.code-discipline.ts"
+      ],
+      "#2qup6n9nvxmj": [
+        "./components/about-section.tsx"
+      ],
+      "#66z9u75y229h": [
+        "./src/App.tsx"
+      ],
+      "#6mgoet028ni5": [
+        "./src/i18n/index.ts"
+      ],
+      "#6q8akrppmz4a": [
+        "./src/router.tsx"
+      ],
+      "#8l6jzcwzcb6n": [
+        "./src/i18n/resources/cs.ts"
+      ],
+      "#a8yacvwogyxm": [
+        "./components/ui/button.tsx"
+      ],
+      "#b1tsq4glstsf": [
+        "./components/properties-section.tsx"
+      ],
+      "#b4oxevzt35f6": [
+        "./src/shared/lang.ts"
+      ],
+      "#d2wjwjjj01k1": [
+        "./components/google-map-embed.tsx"
+      ],
+      "#ea1ieiw65t9h": [
+        "./src/shared/routes.ts"
+      ],
+      "#hi9lz6pfjofm": [
+        "./components/contact-section.tsx"
+      ],
+      "#ipj2r913vrrn": [
+        "./components/header.tsx"
+      ],
+      "#iuaca3ba18pt": [
+        "./components/accommodation/rules-section.tsx"
+      ],
+      "#kjf6v0lh8myc": [
+        "./lib/contact-info.ts"
+      ],
+      "#mup75rs1n2ym": [
+        "./components/expandable-image.tsx"
+      ],
+      "#q5o02e96xsl4": [
+        "./src/main.tsx"
+      ],
+      "#rrf8g6i9biz3": [
+        "./components/benefits-section.tsx"
+      ],
+      "#tptury9eqoo3": [
+        "./lib/accommodations.ts"
+      ],
+      "#uipjrzb4924c": [
+        "./components/hero-section.tsx"
+      ],
+      "#up1tprjis1xy": [
+        "./lib/utils.ts"
+      ],
+      "#viqfxa10uoso": [
+        "./components/card-table.tsx"
+      ],
+      "#vqyappdcupdr": [
+        "./src/i18n/resources/site.ts"
+      ],
+      "#wmufre5pe8pj": [
+        "./vite.config.ts"
+      ],
+      "#wn4njv22f8z0": [
+        "./components/footer.tsx"
+      ],
+      "#xeob3owuhmtf": [
+        "./src/i18n/resources/en.ts"
+      ],
+      "#xolky1luocxg": [
+        "./components/accommodation/page.tsx"
+      ]
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES6"
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "src",
-    "components/accommodation-rules-section.tsx",
+    "components/accommodation/rules-section.tsx",
+    "components/accommodation/page.tsx",
     "components/card-table.tsx",
     "components/about-section.tsx",
     "components/benefits-section.tsx",
@@ -29,10 +123,8 @@
     "components/hero-section.tsx",
     "components/lang-switcher.tsx",
     "components/properties-section.tsx",
-    "components/accommodation-page.tsx",
     "components/ui/button.tsx",
     "lib",
     "vite.config.ts"
-  ],
-  "exclude": ["node_modules"]
+  ]
 }

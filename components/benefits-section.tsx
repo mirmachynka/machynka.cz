@@ -1,6 +1,8 @@
 import { BedDouble, CookingPot, MapPin, ShieldCheck, Sparkles, Wifi } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
+import { CardTable } from "@/components/card-table"
+
 const benefitIcons = [BedDouble, MapPin, Wifi, CookingPot, ShieldCheck, Sparkles]
 
 export function BenefitsSection() {
@@ -19,27 +21,31 @@ export function BenefitsSection() {
           </h2>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-700">
-          {benefits.map(([title, description], index) => {
+        <CardTable
+          items={benefits}
+          columns={3}
+          borderClassName="border-neutral-800"
+          className="bg-neutral-900"
+          itemClassName="group bg-neutral-900 p-10 transition-colors duration-300 hover:bg-primary"
+          getKey={([title]) => title}
+          renderItem={([title, description], index) => {
             const Icon = benefitIcons[index] ?? BedDouble
+
             return (
-            <div
-              key={title}
-              className="bg-neutral-900 p-10 group hover:bg-primary transition-colors duration-300"
-            >
-              <div className="w-14 h-14 bg-neutral-800 flex items-center justify-center mb-8 group-hover:bg-white/20 transition-colors">
-                <Icon className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-black text-white uppercase tracking-tight mb-4">
-                {title}
-              </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
-                {description}
-              </p>
-            </div>
+              <>
+                <div className="w-14 h-14 bg-neutral-800 flex items-center justify-center mb-8 group-hover:bg-white/20 transition-colors">
+                  <Icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-black text-white uppercase tracking-tight mb-4">
+                  {title}
+                </h3>
+                <p className="text-neutral-400 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
+                  {description}
+                </p>
+              </>
             )
-          })}
-        </div>
+          }}
+        />
       </div>
     </section>
   )

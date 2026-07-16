@@ -1,5 +1,5 @@
 import { AboutSection } from "@/components/about-section"
-import { AccommodationPage } from "@/components/accommodation-page"
+import { AccommodationPage } from "@/components/accommodation/page"
 import { BenefitsSection } from "@/components/benefits-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
