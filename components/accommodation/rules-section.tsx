@@ -17,9 +17,9 @@ export function AccommodationRulesSection({ intro, rules, title }: Accommodation
   if (rules.length === 0) return null
 
   return (
-    <div className="mt-6 bg-white p-8 sm:p-10">
+    <div className="mt-6 bg-white p-6 sm:p-10">
       <ClipboardList className="mb-8 h-10 w-10 text-primary" />
-      <h2 className="mb-4 text-2xl font-black uppercase tracking-tight text-neutral-900">
+      <h2 className="mb-4 break-words text-xl font-black uppercase tracking-normal text-neutral-900 sm:text-2xl">
         {title}
       </h2>
       <p className="max-w-3xl leading-relaxed text-neutral-600">{intro}</p>
@@ -29,7 +29,7 @@ export function AccommodationRulesSection({ intro, rules, title }: Accommodation
         getKey={(rule) => rule.title}
         renderItem={(rule) => (
           <>
-            <h3 className="mb-4 text-base font-black uppercase tracking-tight text-neutral-900">
+            <h3 className="mb-4 break-words text-base font-black uppercase tracking-normal text-neutral-900">
               {rule.title}
             </h3>
             <ul className="space-y-3">

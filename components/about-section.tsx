@@ -12,38 +12,38 @@ export function AboutSection() {
             <span className="inline-block text-xs font-black uppercase tracking-widest text-primary mb-6">
               {t("about.label")}
             </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-neutral-900 leading-none tracking-tight mb-8">
+            <h2 className="mb-8 break-words text-3xl font-black leading-none tracking-normal text-neutral-900 min-[380px]:text-4xl sm:text-5xl lg:text-7xl">
               {t("about.titleTop")}
               <br />
               {t("about.titleBottom")}
             </h2>
-            <p className="text-lg text-neutral-600 leading-relaxed mb-6">
+            <p className="mb-6 text-base leading-relaxed text-neutral-600 sm:text-lg">
               {t("about.text1")}
             </p>
-            <p className="text-lg text-neutral-600 leading-relaxed mb-10">
+            <p className="mb-10 text-base leading-relaxed text-neutral-600 sm:text-lg">
               {t("about.text2")}
             </p>
             
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center p-6 bg-neutral-100">
+            <div className="grid grid-cols-1 gap-3 min-[420px]:grid-cols-3 sm:gap-4">
+              <div className="bg-neutral-100 p-5 text-center sm:p-6">
                 <Building2 className="h-6 w-6 mx-auto mb-3 text-neutral-900" />
-                <div className="text-xs font-black uppercase tracking-wide text-neutral-900">{t("about.stats.objects")}</div>
+                <div className="break-words text-xs font-black uppercase leading-tight tracking-normal text-neutral-900 sm:tracking-wide">{t("about.stats.objects")}</div>
               </div>
-              <div className="text-center p-6 bg-neutral-100">
+              <div className="bg-neutral-100 p-5 text-center sm:p-6">
                 <Users className="h-6 w-6 mx-auto mb-3 text-neutral-900" />
-                <div className="text-xs font-black uppercase tracking-wide text-neutral-900">{t("about.stats.rooms")}</div>
+                <div className="break-words text-xs font-black uppercase leading-tight tracking-normal text-neutral-900 sm:tracking-wide">{t("about.stats.rooms")}</div>
               </div>
-              <div className="text-center p-6 bg-neutral-100">
+              <div className="bg-neutral-100 p-5 text-center sm:p-6">
                 <Award className="h-6 w-6 mx-auto mb-3 text-neutral-900" />
-                <div className="text-xs font-black uppercase tracking-wide text-neutral-900">{t("about.stats.years")}</div>
+                <div className="break-words text-xs font-black uppercase leading-tight tracking-normal text-neutral-900 sm:tracking-wide">{t("about.stats.years")}</div>
               </div>
             </div>
           </div>
           
           <div className="relative">
-            <div className="bg-neutral-900 p-8 sm:p-12">
-              <div className="border-l-4 border-primary pl-8">
-                <p className="text-3xl font-black leading-tight text-white sm:text-5xl">
+            <div className="bg-neutral-900 p-6 sm:p-12">
+              <div className="border-l-4 border-primary pl-5 sm:pl-8">
+                <p className="break-words text-2xl font-black leading-tight text-white min-[380px]:text-3xl sm:text-5xl">
                   "{t("about.quote")}"
                 </p>
                 <p className="mt-6 text-sm font-bold uppercase tracking-widest text-white/70">

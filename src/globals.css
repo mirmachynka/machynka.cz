@@ -121,9 +121,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
   }
   html {
     scrollbar-gutter: stable;
+    overflow-x: clip;
   }
   [id] {
     scroll-margin-top: 5rem;

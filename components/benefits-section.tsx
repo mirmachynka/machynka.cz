@@ -16,7 +16,7 @@ export function BenefitsSection() {
           <span className="inline-block text-xs font-black uppercase tracking-widest text-primary mb-6">
             {t("benefits.label")}
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-none tracking-tight">
+          <h2 className="break-words text-3xl font-black leading-none tracking-normal text-white min-[380px]:text-4xl sm:text-5xl lg:text-7xl">
             {t("benefits.title")}
           </h2>
         </div>
@@ -26,7 +26,7 @@ export function BenefitsSection() {
           columns={3}
           borderClassName="border-neutral-800"
           className="bg-neutral-900"
-          itemClassName="group bg-neutral-900 p-10 transition-colors duration-300 hover:bg-primary"
+          itemClassName="group bg-neutral-900 p-6 transition-colors duration-300 hover:bg-primary sm:p-10"
           getKey={([title]) => title}
           renderItem={([title, description], index) => {
             const Icon = benefitIcons[index] ?? BedDouble
@@ -36,7 +36,7 @@ export function BenefitsSection() {
                 <div className="w-14 h-14 bg-neutral-800 flex items-center justify-center mb-8 group-hover:bg-white/20 transition-colors">
                   <Icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-black text-white uppercase tracking-tight mb-4">
+                <h3 className="mb-4 break-words text-lg font-black uppercase tracking-normal text-white sm:text-xl">
                   {title}
                 </h3>
                 <p className="text-neutral-400 text-sm leading-relaxed group-hover:text-white/80 transition-colors">

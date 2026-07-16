@@ -16,50 +16,50 @@ export function ContactSection() {
             <span className="inline-block text-xs font-black uppercase tracking-widest text-primary mb-6">
               {t("common.contact")}
             </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-neutral-900 leading-none tracking-tight mb-8">
+            <h2 className="mb-8 break-words text-3xl font-black leading-none tracking-normal text-neutral-900 min-[380px]:text-4xl sm:text-5xl lg:text-7xl">
               {t("contactSection.titleTop")}
               <br />
               {t("contactSection.titleBottom")}
             </h2>
-            <p className="text-lg text-neutral-600 leading-relaxed mb-12 max-w-md">
+            <p className="mb-10 max-w-md text-base leading-relaxed text-neutral-600 sm:mb-12 sm:text-lg">
               {t("contactSection.text")}
             </p>
             
             <div className="space-y-4">
               <a 
                 href={phoneHref(contactInfo.accommodationPhone)}
-                className="flex items-center gap-6 p-6 bg-neutral-100 hover:bg-primary group transition-colors"
+                className="group flex items-center gap-4 bg-neutral-100 p-4 transition-colors hover:bg-primary sm:gap-6 sm:p-6"
               >
-                <div className="w-16 h-16 bg-white flex items-center justify-center">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-white sm:h-16 sm:w-16">
                   <Phone className="h-6 w-6 text-neutral-900" />
                 </div>
-                <div className="flex-1">
-                  <div className="text-xs font-black uppercase tracking-widest text-neutral-500 group-hover:text-white/70 transition-colors mb-1">
+                <div className="min-w-0 flex-1">
+                  <div className="mb-1 break-words text-[10px] font-black uppercase leading-tight tracking-[0.06em] text-neutral-500 transition-colors group-hover:text-white/70 sm:text-xs sm:tracking-widest">
                     {t("contactSection.accommodationPhone")}
                   </div>
-                  <div className="text-2xl font-black text-neutral-900 group-hover:text-white transition-colors">
+                  <div className="text-xl font-black text-neutral-900 transition-colors group-hover:text-white sm:text-2xl">
                     {contactInfo.accommodationPhone}
                   </div>
                 </div>
-                <ArrowRight className="h-6 w-6 text-neutral-400 group-hover:text-white transition-colors" />
+                <ArrowRight className="h-5 w-5 shrink-0 text-neutral-400 transition-colors group-hover:text-white sm:h-6 sm:w-6" />
               </a>
               
               <a 
                 href="mailto:miroslav@machynka.cz" 
-                className="flex items-center gap-6 p-6 bg-neutral-100 hover:bg-primary group transition-colors"
+                className="group flex items-center gap-4 bg-neutral-100 p-4 transition-colors hover:bg-primary sm:gap-6 sm:p-6"
               >
-                <div className="w-16 h-16 bg-white flex items-center justify-center">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-white sm:h-16 sm:w-16">
                   <Mail className="h-6 w-6 text-neutral-900" />
                 </div>
-                <div className="flex-1">
-                  <div className="text-xs font-black uppercase tracking-widest text-neutral-500 group-hover:text-white/70 transition-colors mb-1">
+                <div className="min-w-0 flex-1">
+                  <div className="mb-1 break-words text-[10px] font-black uppercase leading-tight tracking-[0.06em] text-neutral-500 transition-colors group-hover:text-white/70 sm:text-xs sm:tracking-widest">
                     {t("common.email")}
                   </div>
-                  <div className="text-xl sm:text-2xl font-black text-neutral-900 group-hover:text-white transition-colors break-all">
+                  <div className="break-all text-lg font-black text-neutral-900 transition-colors group-hover:text-white sm:text-2xl">
                     miroslav@machynka.cz
                   </div>
                 </div>
-                <ArrowRight className="h-6 w-6 text-neutral-400 group-hover:text-white transition-colors" />
+                <ArrowRight className="h-5 w-5 shrink-0 text-neutral-400 transition-colors group-hover:text-white sm:h-6 sm:w-6" />
               </a>
             </div>
 
@@ -73,8 +73,8 @@ export function ContactSection() {
           </div>
           
           <div className="space-y-6">
-            <div className="bg-neutral-900 p-8 sm:p-10">
-              <h3 className="text-xl font-black text-white uppercase tracking-tight mb-6">
+            <div className="bg-neutral-900 p-6 sm:p-10">
+              <h3 className="mb-6 break-words text-lg font-black uppercase tracking-normal text-white sm:text-xl">
                 {t("contactSection.contactAddress")}
               </h3>
               <div className="space-y-4">
@@ -94,7 +94,7 @@ export function ContactSection() {
                   </div>
                 </div>
                 <div className="border-t border-neutral-800 pt-4">
-                  <div className="mb-3 text-xs font-black uppercase tracking-widest text-neutral-500">
+                  <div className="mb-3 break-words text-xs font-black uppercase leading-tight tracking-[0.06em] text-neutral-500 sm:tracking-widest">
                     {t("contactSection.accommodationAddresses")}
                   </div>
                 </div>
@@ -115,8 +115,8 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-neutral-900 p-8 sm:p-10">
-              <h3 className="text-xl font-black text-white uppercase tracking-tight mb-6">
+            <div className="bg-neutral-900 p-6 sm:p-10">
+              <h3 className="mb-6 break-words text-lg font-black uppercase tracking-normal text-white sm:text-xl">
                 {t("contactSection.operator")}
               </h3>
               <div className="flex items-start gap-4">
@@ -136,7 +136,7 @@ export function ContactSection() {
               </div>
             </div>
             
-            <Button asChild size="lg" className="w-full h-16 text-base font-black uppercase tracking-wide bg-primary hover:bg-primary/90">
+            <Button asChild size="lg" className="h-auto min-h-12 w-full bg-primary px-5 py-3 text-center text-base font-black uppercase leading-tight tracking-normal whitespace-normal hover:bg-primary/90 sm:min-h-16 sm:py-4 sm:tracking-wide">
               <a href={phoneHref(contactInfo.accommodationPhone)}>
                 {t("common.callNow")}
                 <Phone className="ml-2 h-5 w-5" />

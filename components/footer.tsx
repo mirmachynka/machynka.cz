@@ -17,7 +17,7 @@ export function Footer() {
               <img
                 src="/footer-logo.svg"
                 alt="MACHYNKA s.r.o."
-                className="h-20 w-auto max-w-[320px] object-contain"
+              className="h-16 w-auto max-w-full object-contain sm:h-20 sm:max-w-[320px]"
               />
             </Link>
             <p className="text-neutral-400 leading-relaxed max-w-sm mb-8">
@@ -25,7 +25,7 @@ export function Footer() {
             </p>
             <a 
               href={phoneHref(contactInfo.accommodationPhone)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-800 text-white text-sm font-bold hover:bg-primary transition-colors"
+              className="inline-flex max-w-full items-center gap-2 bg-neutral-800 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-primary"
             >
               <Phone className="h-4 w-4" />
               {contactInfo.accommodationPhone}
@@ -33,7 +33,7 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-black text-white uppercase tracking-wide mb-6 text-sm">
+            <h4 className="mb-6 break-words text-sm font-black uppercase tracking-normal text-white sm:tracking-wide">
               {t("footer.navigation")}
             </h4>
             <nav className="space-y-4">
@@ -46,7 +46,7 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-black text-white uppercase tracking-wide mb-6 text-sm">
+            <h4 className="mb-6 break-words text-sm font-black uppercase tracking-normal text-white sm:tracking-wide">
               {t("common.contact")}
             </h4>
             <div className="space-y-4">
@@ -59,7 +59,7 @@ export function Footer() {
               </div>
               <a 
                 href={`mailto:${contactInfo.email}`}
-                className="flex items-center gap-3 text-neutral-400 text-sm hover:text-primary transition-colors"
+                className="flex min-w-0 items-center gap-3 break-all text-sm text-neutral-400 transition-colors hover:text-primary"
               >
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                 {contactInfo.email}

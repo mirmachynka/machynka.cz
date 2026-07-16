@@ -39,27 +39,27 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
 
   return (
     <main>
-      <section className="relative min-h-[70vh] bg-neutral-900 px-6 pt-16 pb-20 sm:px-12 lg:px-20">
+      <section className="relative min-h-[70vh] bg-neutral-900 px-4 pt-12 pb-16 sm:px-12 sm:pt-16 sm:pb-20 lg:px-20">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(300px,0.55fr)] lg:items-start lg:gap-16 xl:gap-20">
           <div>
             <Link
               href="/#ubytovani"
-              className="mb-10 flex w-fit items-center gap-2 text-sm font-black uppercase tracking-wide text-neutral-400 transition-colors hover:text-white"
+              className="mb-8 flex w-fit items-center gap-2 text-sm font-black uppercase tracking-normal text-neutral-400 transition-colors hover:text-white sm:mb-10 sm:tracking-wide"
             >
               <ArrowLeft className="h-4 w-4" />
               {t("common.backToAccommodation")}
             </Link>
-            <h1 className="text-5xl font-black leading-none tracking-wide text-white sm:text-7xl lg:text-8xl">
+            <h1 className="break-words text-[2.75rem] font-black leading-none tracking-normal text-white min-[380px]:text-[3.25rem] sm:text-7xl sm:tracking-wide lg:text-8xl">
               {name}
             </h1>
-            <p className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-neutral-400 sm:text-xl">
+            <p className="mt-8 max-w-2xl text-base font-medium leading-relaxed text-neutral-400 sm:text-xl">
               {detail}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button
                 asChild
                 size="lg"
-                className="min-h-14 h-auto w-full bg-primary px-5 py-4 text-center text-base font-black uppercase leading-tight tracking-wide whitespace-normal hover:bg-primary/90 sm:w-auto sm:px-8"
+                className="h-auto min-h-12 w-full bg-primary px-5 py-3 text-center text-base font-black uppercase leading-tight tracking-normal whitespace-normal hover:bg-primary/90 sm:min-h-14 sm:w-auto sm:px-8 sm:py-4 sm:tracking-wide"
               >
                 <Link href="/#kontakt">
                   <span className="min-w-0">{t("common.reserveRoom")}</span>
@@ -70,7 +70,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                 <Button
                   asChild
                   size="lg"
-                  className="min-h-14 h-auto w-full bg-white px-5 py-4 text-center text-base font-black uppercase leading-tight tracking-wide text-neutral-900 whitespace-normal hover:bg-neutral-200 sm:w-auto sm:px-8"
+                  className="h-auto min-h-12 w-full bg-white px-5 py-3 text-center text-base font-black uppercase leading-tight tracking-normal text-neutral-900 whitespace-normal hover:bg-neutral-200 sm:min-h-14 sm:w-auto sm:px-8 sm:py-4 sm:tracking-wide"
                 >
                   <a href={accommodation.bookingUrl} target="_blank" rel="noreferrer">
                     <span className="min-w-0">{t("common.bookOnBooking")}</span>
@@ -89,11 +89,11 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/35 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 bg-primary p-8">
-                <p className="text-xl font-black text-white">
+              <div className="absolute bottom-0 left-0 right-0 bg-primary p-5 sm:p-8">
+                <p className="break-words text-lg font-black leading-tight text-white sm:text-xl">
                   {mapAddress}
                 </p>
-                <p className="mt-2 text-sm font-bold uppercase tracking-widest text-white/70">
+                <p className="mt-2 break-words text-xs font-bold uppercase leading-tight tracking-[0.06em] text-white/70 sm:text-sm sm:tracking-widest">
                   {t("common.accommodationInBucovice")}
                 </p>
               </div>
@@ -108,7 +108,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
             <span className="mb-6 inline-block text-xs font-black uppercase tracking-widest text-primary">
               {t("accommodationPage.featuresLabel")}
             </span>
-            <h2 className="text-4xl font-black leading-none tracking-tight text-neutral-900 sm:text-5xl lg:text-7xl">
+            <h2 className="break-words text-3xl font-black leading-none tracking-normal text-neutral-900 min-[380px]:text-4xl sm:text-5xl lg:text-7xl">
               {t("accommodationPage.featuresTitleTop")}
               <br />
               {t("accommodationPage.featuresTitleBottom")}
@@ -120,13 +120,13 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
             columns={2}
             breakpoint="sm"
             getKey={(feature, index) => featureLabels[index] ?? feature.label}
-            itemClassName="p-8"
+            itemClassName="p-6 sm:p-8"
             renderItem={(feature, index) => (
               <>
                 <div className="mb-6 flex h-14 w-14 items-center justify-center bg-neutral-100">
                   <feature.icon className="h-6 w-6 text-neutral-900" />
                 </div>
-                <h3 className="text-lg font-black uppercase tracking-tight text-neutral-900">
+                <h3 className="break-words text-base font-black uppercase tracking-normal text-neutral-900 sm:text-lg">
                   {featureLabels[index]}
                 </h3>
               </>
@@ -142,7 +142,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
               <span className="mb-6 inline-block text-xs font-black uppercase tracking-widest text-primary">
                 {t("accommodationPage.roomsLabel")}
               </span>
-              <h2 className="text-4xl font-black leading-none tracking-tight text-neutral-900 sm:text-5xl lg:text-7xl">
+              <h2 className="break-words text-3xl font-black leading-none tracking-normal text-neutral-900 min-[380px]:text-4xl sm:text-5xl lg:text-7xl">
                 {t("accommodationPage.roomsTitleTop")}
                 <br />
                 {t("accommodationPage.roomsTitleBottom")}
@@ -152,18 +152,18 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
             <CardTable
               items={rooms}
               getKey={([roomName]) => roomName}
-              itemClassName="p-8 sm:p-10"
+              itemClassName="p-6 sm:p-10"
               renderItem={([roomName, capacity, size, roomDescription]) => (
                 <>
                   <div className="mb-8 flex flex-wrap gap-3">
-                    <span className="bg-neutral-900 px-3 py-2 text-xs font-black uppercase tracking-wide text-white">
+                    <span className="bg-neutral-900 px-3 py-2 text-xs font-black uppercase tracking-normal text-white sm:tracking-wide">
                       {capacity}
                     </span>
-                    <span className="bg-neutral-100 px-3 py-2 text-xs font-black uppercase tracking-wide text-neutral-900">
+                    <span className="bg-neutral-100 px-3 py-2 text-xs font-black uppercase tracking-normal text-neutral-900 sm:tracking-wide">
                       {size}
                     </span>
                   </div>
-                  <h3 className="mb-4 text-2xl font-black uppercase tracking-tight text-neutral-900">
+                  <h3 className="mb-4 break-words text-xl font-black uppercase tracking-normal text-neutral-900 sm:text-2xl">
                     {roomName}
                   </h3>
                   <p className="leading-relaxed text-neutral-600">{roomDescription}</p>
@@ -181,7 +181,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
               <span className="mb-6 inline-block text-xs font-black uppercase tracking-widest text-primary">
                 {t("accommodationPage.galleryLabel")}
               </span>
-              <h2 className="text-4xl font-black leading-none tracking-tight text-neutral-900 sm:text-5xl lg:text-7xl">
+              <h2 className="break-words text-3xl font-black leading-none tracking-normal text-neutral-900 min-[380px]:text-4xl sm:text-5xl lg:text-7xl">
                 {t("accommodationPage.galleryTitle")}
               </h2>
             </div>
@@ -205,9 +205,9 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
       <section className="bg-neutral-100 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-2">
-            <div className="bg-neutral-900 p-8 sm:p-10">
+            <div className="bg-neutral-900 p-6 sm:p-10">
               <Building2 className="mb-8 h-10 w-10 text-primary" />
-              <h2 className="mb-4 text-2xl font-black uppercase tracking-tight text-white">
+              <h2 className="mb-4 break-words text-xl font-black uppercase tracking-normal text-white sm:text-2xl">
                 {name}
               </h2>
               <p className="leading-relaxed text-neutral-400">{description}</p>
@@ -245,9 +245,9 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                 </div>
               )}
             </div>
-            <div className="bg-white p-8 sm:p-10">
+            <div className="bg-white p-6 sm:p-10">
               <MapPin className="mb-8 h-10 w-10 text-primary" />
-              <h2 className="mb-4 text-2xl font-black uppercase tracking-tight text-neutral-900">
+              <h2 className="mb-4 break-words text-xl font-black uppercase tracking-normal text-neutral-900 sm:text-2xl">
                 {t("accommodationPage.locationTitle")}
               </h2>
               <p className="mb-6 leading-relaxed text-neutral-600">{mapAddress}</p>
@@ -262,9 +262,9 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
           </div>
 
           {priceNotes.length > 0 && (
-            <div className="mt-6 bg-white p-8 sm:p-10">
+            <div className="mt-6 bg-white p-6 sm:p-10">
               <ReceiptText className="mb-8 h-10 w-10 text-primary" />
-              <h2 className="mb-4 text-2xl font-black uppercase tracking-tight text-neutral-900">
+              <h2 className="mb-4 break-words text-xl font-black uppercase tracking-normal text-neutral-900 sm:text-2xl">
                 {t("accommodationPage.priceTitle")}
               </h2>
               <div className="space-y-4">
@@ -282,7 +282,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                   getKey={(group) => group.name}
                   renderItem={(group) => (
                     <>
-                      <h3 className="mb-4 text-lg font-black uppercase tracking-tight text-neutral-900">
+                      <h3 className="mb-4 break-words text-base font-black uppercase tracking-normal text-neutral-900 sm:text-lg">
                         {group.name}
                       </h3>
                       <div className="space-y-3">
@@ -300,7 +300,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                 <Button
                   asChild
                   size="lg"
-                  className="min-h-14 h-auto w-full bg-primary px-5 py-4 text-center text-base font-black uppercase leading-tight tracking-wide whitespace-normal hover:bg-primary/90 sm:w-auto sm:px-8"
+                  className="h-auto min-h-12 w-full bg-primary px-5 py-3 text-center text-base font-black uppercase leading-tight tracking-normal whitespace-normal hover:bg-primary/90 sm:min-h-14 sm:w-auto sm:px-8 sm:py-4 sm:tracking-wide"
                 >
                   <a href={phoneHref(reservationPhone)}>
                     <span className="min-w-0">{t("common.callForPrice")}</span>
@@ -311,7 +311,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                   <Button
                     asChild
                     size="lg"
-                    className="min-h-14 h-auto w-full bg-neutral-900 px-5 py-4 text-center text-base font-black uppercase leading-tight tracking-wide whitespace-normal hover:bg-neutral-800 sm:w-auto sm:px-8"
+                    className="h-auto min-h-12 w-full bg-neutral-900 px-5 py-3 text-center text-base font-black uppercase leading-tight tracking-normal whitespace-normal hover:bg-neutral-800 sm:min-h-14 sm:w-auto sm:px-8 sm:py-4 sm:tracking-wide"
                   >
                     <a href={accommodation.bookingUrl} target="_blank" rel="noreferrer">
                       <span className="min-w-0">{t("common.bookOnBooking")}</span>
@@ -329,8 +329,8 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
             title={t("accommodationPage.rulesTitle")}
           />
 
-          <div className="mt-6 bg-white p-8 sm:p-10">
-            <h2 className="mb-4 text-2xl font-black uppercase tracking-tight text-neutral-900">
+          <div className="mt-6 bg-white p-6 sm:p-10">
+            <h2 className="mb-4 break-words text-xl font-black uppercase tracking-normal text-neutral-900 sm:text-2xl">
               {t("accommodationPage.otherOption")}
             </h2>
             {related.map((item) => (
@@ -339,7 +339,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                 href={item.path}
                 className="group flex items-center justify-between border-t border-neutral-200 py-5 text-neutral-900"
               >
-                <span className="font-black uppercase tracking-tight">{t(`accommodations.${item.id}.name`)}</span>
+                <span className="min-w-0 break-words font-black uppercase tracking-normal">{t(`accommodations.${item.id}.name`)}</span>
                 <ArrowRight className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-primary" />
               </Link>
             ))}
