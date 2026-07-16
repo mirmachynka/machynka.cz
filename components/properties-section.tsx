@@ -51,7 +51,7 @@ export function PropertiesSection() {
                 </div>
               </div>
               
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <h3 className="text-2xl font-black text-neutral-900 uppercase tracking-tight mb-4">
                   {name}
                 </h3>
@@ -59,20 +59,20 @@ export function PropertiesSection() {
                   {description}
                 </p>
                 
-                <div className="grid grid-cols-4 gap-4 mb-8">
+                <div className="mb-8 grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-4">
                   {property.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="text-center">
+                    <div key={featureIndex} className="min-w-0 text-center">
                       <div className="w-12 h-12 mx-auto bg-neutral-100 flex items-center justify-center mb-2">
                         <feature.icon className="h-5 w-5 text-neutral-700" />
                       </div>
-                      <span className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide">
+                      <span className="block text-[10px] font-bold leading-relaxed text-neutral-500 uppercase tracking-[0.02em] break-words">
                         {featureLabels[featureIndex]}
                       </span>
                     </div>
                   ))}
                 </div>
                 
-                <div className="pt-6 border-t border-neutral-200 flex items-center justify-between">
+                <div className="flex flex-col gap-3 border-t border-neutral-200 pt-6 min-[360px]:flex-row min-[360px]:items-center min-[360px]:justify-between">
                   <span className="text-sm text-neutral-500 font-medium">{property.address}</span>
                   <span
                     className="text-sm font-black text-primary uppercase tracking-wide hover:underline"

@@ -18,7 +18,7 @@ export const contactInfo = {
     },
     {
       name: "Apartmány Libuše",
-      street: "Nová 590",
+      street: "Sokolovská 330",
       city: "Bučovice",
       postalCode: "685 01",
     },

@@ -40,7 +40,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
   return (
     <main>
       <section className="relative min-h-[70vh] bg-neutral-900 px-6 pt-16 pb-20 sm:px-12 lg:px-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-start">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(300px,0.55fr)] lg:items-start lg:gap-16 xl:gap-20">
           <div>
             <Link
               href="/#ubytovani"
@@ -81,7 +81,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative lg:ml-auto lg:w-full lg:max-w-[520px] xl:max-w-[560px]">
             <div className="relative aspect-[4/5] overflow-hidden bg-neutral-800">
               <img
                 src={accommodation.exteriorImage}
