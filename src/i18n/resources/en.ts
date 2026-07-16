@@ -24,7 +24,7 @@ export const en = {
       reserveRoom: "Book by phone/e-mail",
     },
     hero: {
-      titleTop: "STAY",
+      titleTop: "ACCOMMODATION",
       titleAccent: "MACHYNKA",
       text: "Apartmány Libuše and Penzion Machynka in Bučovice for short and longer stays.",
       primary: "View offer",
@@ -37,7 +37,7 @@ export const en = {
     },
     about: {
       label: "About",
-      titleTop: "STAY",
+      titleTop: "ACCOMMODATION",
       titleBottom: "IN BUČOVICE",
       text1: "We offer practical accommodation in Bučovice with an emphasis on comfort, cleanliness and good accessibility.",
       text2: "Guests can choose between two accommodation properties: Apartmány Libuše with 17 rooms and Penzion Machynka with 18 rooms.",

@@ -23,8 +23,8 @@ export function HeroSection() {
       <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-center px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 w-full py-20 sm:py-32 lg:w-[64%] xl:w-[58%]">
           <div className="max-w-xl lg:max-w-3xl">
-            <h1 className="mb-8 break-words text-[2.75rem] font-black leading-none tracking-normal text-white min-[380px]:text-[3.25rem] md:text-7xl md:tracking-wide lg:break-normal lg:text-8xl">
-              {t("hero.titleTop")}
+            <h1 className="mb-8 break-words text-[clamp(2rem,9.6vw,3.25rem)] font-black leading-none tracking-normal text-white md:text-7xl md:tracking-wide lg:break-normal lg:text-8xl">
+              <span className="whitespace-nowrap">{t("hero.titleTop")}</span>
               <br />
               <span className="text-primary">{t("hero.titleAccent")}</span>
             </h1>
