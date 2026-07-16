@@ -1,7 +1,6 @@
 import {
   Accessibility,
   Bath,
-  Building2,
   Coffee,
   MapPin,
   Tv,
@@ -116,10 +115,10 @@ export const accommodations: Accommodation[] = [
     description:
       "Moderní penzion na okraji Bučovic s praktickým zázemím a klidným dvorem.",
     detail:
-      "V klidné části Bučovic poskytujeme moderní penzion pro krátké i delší pobyty. Budova prošla v roce 2016 náročnou rekonstrukcí.",
+      "V klidné části Bučovic poskytujeme moderní penzion pro krátké i delší pobyty s praktickým vybavením a dobrým zázemím.",
     features: [
       { icon: MapPin, label: "Klidná část Bučovic" },
-      { icon: Building2, label: "Rekonstrukce 2016" },
+      { icon: Wifi, label: "Wi-Fi" },
       { icon: Accessibility, label: "Bezbariérový přístup" },
       { icon: Coffee, label: "Vybavené kuchyně" },
     ],

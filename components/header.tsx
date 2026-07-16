@@ -13,8 +13,8 @@ export function Header() {
   const navLinks = t("nav.items", { returnObjects: true }) as Array<{ href: string; label: string }>
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white overflow-visible relative">
+      <div className="relative z-10 bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3">
             <img
@@ -60,7 +60,7 @@ export function Header() {
 
       <div
         className={cn(
-          "bg-white transition-[max-height,opacity,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden",
+          "absolute left-0 right-0 top-full bg-white shadow-[0_18px_35px_rgb(0_0_0_/0.08)] transition-[max-height,opacity,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden",
           mobileMenuOpen
             ? "max-h-[30rem] border-t border-neutral-200 opacity-100"
             : "pointer-events-none max-h-0 border-t border-transparent opacity-0",

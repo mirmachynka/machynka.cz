@@ -51,7 +51,6 @@ export function AboutSection() {
                 </p>
               </div>
             </div>
-            <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-neutral-200 -z-10" />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
-import { Home, MapPin, Heart, Clock, Shield, Sparkles } from "lucide-react"
+import { BedDouble, CookingPot, MapPin, ShieldCheck, Sparkles, Wifi } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
-const benefitIcons = [Home, MapPin, Heart, Clock, Shield, Sparkles]
+const benefitIcons = [BedDouble, MapPin, Wifi, CookingPot, ShieldCheck, Sparkles]
 
 export function BenefitsSection() {
   const { t } = useTranslation()
@@ -21,7 +21,7 @@ export function BenefitsSection() {
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-700">
           {benefits.map(([title, description], index) => {
-            const Icon = benefitIcons[index] ?? Home
+            const Icon = benefitIcons[index] ?? BedDouble
             return (
             <div
               key={title}

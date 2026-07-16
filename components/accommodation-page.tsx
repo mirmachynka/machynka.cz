@@ -59,10 +59,10 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
               <Button
                 asChild
                 size="lg"
-                className="h-14 bg-primary px-8 text-base font-black uppercase tracking-wide hover:bg-primary/90"
+                className="min-h-14 h-auto w-full bg-primary px-5 py-4 text-center text-base font-black uppercase leading-tight tracking-wide whitespace-normal hover:bg-primary/90 sm:w-auto sm:px-8"
               >
                 <Link href="/#kontakt">
-                  {t("common.reserveRoom")}
+                  <span className="min-w-0">{t("common.reserveRoom")}</span>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -70,10 +70,10 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                 <Button
                   asChild
                   size="lg"
-                  className="h-14 bg-white px-8 text-base font-black uppercase tracking-wide text-neutral-900 hover:bg-neutral-200"
+                  className="min-h-14 h-auto w-full bg-white px-5 py-4 text-center text-base font-black uppercase leading-tight tracking-wide text-neutral-900 whitespace-normal hover:bg-neutral-200 sm:w-auto sm:px-8"
                 >
                   <a href={accommodation.bookingUrl} target="_blank" rel="noreferrer">
-                    {t("common.bookOnBooking")}
+                    <span className="min-w-0">{t("common.bookOnBooking")}</span>
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
@@ -295,10 +295,10 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                 <Button
                   asChild
                   size="lg"
-                  className="h-14 bg-primary px-8 text-base font-black uppercase tracking-wide hover:bg-primary/90"
+                  className="min-h-14 h-auto w-full bg-primary px-5 py-4 text-center text-base font-black uppercase leading-tight tracking-wide whitespace-normal hover:bg-primary/90 sm:w-auto sm:px-8"
                 >
                   <a href={phoneHref(reservationPhone)}>
-                    {t("common.callForPrice")}
+                    <span className="min-w-0">{t("common.callForPrice")}</span>
                     <Phone className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
@@ -306,10 +306,10 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
                   <Button
                     asChild
                     size="lg"
-                    className="h-14 bg-neutral-900 px-8 text-base font-black uppercase tracking-wide hover:bg-neutral-800"
+                    className="min-h-14 h-auto w-full bg-neutral-900 px-5 py-4 text-center text-base font-black uppercase leading-tight tracking-wide whitespace-normal hover:bg-neutral-800 sm:w-auto sm:px-8"
                   >
                     <a href={accommodation.bookingUrl} target="_blank" rel="noreferrer">
-                      {t("common.bookOnBooking")}
+                      <span className="min-w-0">{t("common.bookOnBooking")}</span>
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </Button>

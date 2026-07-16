@@ -199,8 +199,8 @@ export const site = {
         name: "Penzion Machynka",
         shortName: "Machynka",
         description: "Modern guesthouse accommodation on the edge of Bučovice, with practical facilities and a quiet courtyard.",
-        detail: "In a quiet part of Bučovice, we provide modern guesthouse accommodation for short and longer stays. The building underwent a major reconstruction in 2016.",
-        features: ["Quiet part of Bučovice", "Reconstructed in 2016", "Barrier-free access", "Equipped kitchens"],
+        detail: "In a quiet part of Bučovice, we provide modern guesthouse accommodation for short and longer stays with practical equipment and good facilities.",
+        features: ["Quiet part of Bučovice", "Wi-Fi", "Barrier-free access", "Equipped kitchens"],
         stayInfo: ["Check-in from 14:00", "Check-out by 10:00", "Reception and in-person reservations: Sokolovská 793, 685 01 Bučovice"],
         priceNotes: [
           "The price depends on the selected apartment or studio, number of guests and date of stay.",
@@ -422,8 +422,8 @@ export const site = {
         name: "Penzion Machynka",
         shortName: "Machynka",
         description: "Moderní penzion na okraji Bučovic s praktickým zázemím a klidným dvorem.",
-        detail: "V klidné části Bučovic poskytujeme moderní penzion pro krátké i delší pobyty. Budova prošla v roce 2016 náročnou rekonstrukcí.",
-        features: ["Klidná část Bučovic", "Rekonstrukce 2016", "Bezbariérový přístup", "Vybavené kuchyně"],
+        detail: "V klidné části Bučovic poskytujeme moderní penzion pro krátké i delší pobyty s praktickým vybavením a dobrým zázemím.",
+        features: ["Klidná část Bučovic", "Wi-Fi", "Bezbariérový přístup", "Vybavené kuchyně"],
         stayInfo: ["Check-in od 14:00", "Check-out do 10:00", "Recepce a osobní rezervace: Sokolovská 793, 685 01 Bučovice"],
         priceNotes: [
           "Výše ceny se odvíjí od zvoleného apartmánu či studia, počtu osob a termínu ubytování.",
