@@ -1,0 +1,225 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "#007i1ghquiad": [
+        "../../../src/frontend/components/domain/accommodation/sections/price_panel.tsx"
+      ],
+      "#0179hhffqzls": [
+        "../../../src/frontend/components/domain/accommodation/i18n/cs.ts"
+      ],
+      "#02hzv8s7p4s3": [
+        "../../../src/frontend/components/domain/accommodation/i18n/en.ts"
+      ],
+      "#10mmcc87u9zo": [
+        "../../bundler/config.ts"
+      ],
+      "#1rocd7vlhz94": [
+        "../../../src/frontend/app.tsx"
+      ],
+      "#2ajuusged5jk": [
+        "../../../src/frontend/shared/accommodations.ts"
+      ],
+      "#47jjzns0wjli": [
+        "../../../src/frontend/components/primitives/google_map_embed.tsx"
+      ],
+      "#4vj346erflbs": [
+        "../../../src/frontend/components/domain/styles/properties_section.scss"
+      ],
+      "#60epvdlo48b2": [
+        "../../../src/frontend/components/domain/styles/contact_section.scss"
+      ],
+      "#6ndz2rj29nh5": [
+        "../../frontend/config.ts"
+      ],
+      "#6sb7guuby63q": [
+        "../../../src/frontend/js/index.client.tsx"
+      ],
+      "#73gud44onpde": [
+        "../../../src/frontend/components/primitives/styles/card_table.scss"
+      ],
+      "#7b4qin7h5g8c": [
+        "../../../src/frontend/components/domain/contact_section.tsx"
+      ],
+      "#7i6vltj1tgpv": [
+        "../../../src/frontend/components/domain/styles/hero_section.scss"
+      ],
+      "#7n0ab4bfo1jp": [
+        "../../../src/bin/dev.ts"
+      ],
+      "#8gzm5ou53wxc": [
+        "../../../src/frontend/components/domain/styles/benefits_section.scss"
+      ],
+      "#98mpqv7qw7pn": [
+        "../../../src/frontend/components/domain/accommodation/sections/features.tsx"
+      ],
+      "#aequr96wfpxz": [
+        "../../../src/frontend/shared/contact_info.ts"
+      ],
+      "#b5pvza69q80c": [
+        "../../../src/frontend/components/domain/accommodation/styles/page.scss"
+      ],
+      "#bhkb4brq7vk0": [
+        "../../frontend/typography.ts"
+      ],
+      "#bo778qhulovu": [
+        "../../../src/frontend/components/chrome/styles/footer.scss"
+      ],
+      "#c41zztc50tb6": [
+        "../../frontend/components/overlays.ts"
+      ],
+      "#c71sgs0jz7sy": [
+        "../../../src/bin/frontend/build.ts"
+      ],
+      "#cgroy6iibw7w": [
+        "../../../src/frontend/components/primitives/button.tsx"
+      ],
+      "#cy12wdn2z1aj": [
+        "../../frontend/components/button.ts"
+      ],
+      "#d19rad2krym3": [
+        "../../../src/frontend/components/chrome/header.tsx"
+      ],
+      "#d8yb63u82y1i": [
+        "../../../src/frontend/components/domain/styles/about_section.scss"
+      ],
+      "#dlvr30qrrttz": [
+        "../../../src/frontend/components/primitives/styles/expandable_image.scss"
+      ],
+      "#e4psc7wgvlyz": [
+        "../../frontend/theme.ts"
+      ],
+      "#ech1zmk0hm6a": [
+        "../../../src/frontend/components/domain/accommodation/page.tsx"
+      ],
+      "#ekdftwan41xj": [
+        "../../../src/frontend/components/domain/hero_section.tsx"
+      ],
+      "#eww9luqvc386": [
+        "../../../src/frontend/shared/router.tsx"
+      ],
+      "#f0h50srahwn1": [
+        "../../../src/frontend/components/chrome/i18n/en.ts"
+      ],
+      "#fu8dif08y1i5": [
+        "../../../src/frontend/components/chrome/i18n/cs.ts"
+      ],
+      "#gjru0ur6caab": [
+        "../../../src/frontend/components/domain/accommodation/sections/location_panel.tsx"
+      ],
+      "#gpkp4b4vfavh": [
+        "../../../src/frontend/icon_specs.ts"
+      ],
+      "#gqbmqapv1gar": [
+        "../../../src/frontend/components/primitives/card_table.tsx"
+      ],
+      "#huyczbizz5kz": [
+        "../../../src/frontend/components/domain/accommodation/rules_section.tsx"
+      ],
+      "#hxc1no930ojo": [
+        "../../../src/frontend/components/domain/styles/shared.scss"
+      ],
+      "#hyj0eo4p9hev": [
+        "../../../src/frontend/pages/home.tsx"
+      ],
+      "#i0bvtbidf4kj": [
+        "../../frontend/tokens.ts"
+      ],
+      "#jpydwvtclrzh": [
+        "../../../src/frontend/components/chrome/footer.tsx"
+      ],
+      "#kiu1y3iria5w": [
+        "../../../src/frontend/components/domain/accommodation/sections/rooms.tsx"
+      ],
+      "#ko1s2pcqme9v": [
+        "../../../src/frontend/components/domain/properties_section.tsx"
+      ],
+      "#l5fyaqigsm8q": [
+        "../../../src/frontend/components/chrome/nav_items.ts"
+      ],
+      "#l8hssk9dgnjw": [
+        "../../../src/frontend/components/domain/accommodation/styles/rules_section.scss"
+      ],
+      "#lu28xyaiq63v": [
+        "../../../src/frontend/components/domain/accommodation/sections/hero.tsx"
+      ],
+      "#lub199gl3q3w": [
+        "../../frontend/palette.ts"
+      ],
+      "#m7bw89v4qsjy": [
+        "../../../src/frontend/components/domain/accommodation/numbers.ts"
+      ],
+      "#m9mr2q3w3i80": [
+        "../../../src/types/assets.d.ts"
+      ],
+      "#mmqy5cbhqaf7": [
+        "../../../src/types/product.d.ts"
+      ],
+      "#n99t4onl5ufo": [
+        "../../../src/frontend/shared/lang/use.ts"
+      ],
+      "#nc704bovl0t8": [
+        "../../../src/frontend/components/domain/benefits_section.tsx"
+      ],
+      "#o5br7b2gfruy": [
+        "../../../src/bin/frontend/shell.ts"
+      ],
+      "#oq3el5biuo0q": [
+        "../../../src/frontend/components/primitives/expandable_image.tsx"
+      ],
+      "#plsr0hqod53h": [
+        "../../../src/frontend/components/chrome/styles/lang_switcher.scss"
+      ],
+      "#ppwqwx7cdbgx": [
+        "../../../src/frontend/components/domain/accommodation/translator.ts"
+      ],
+      "#q5kbipc4jv50": [
+        "../../../src/frontend/components/chrome/lang_switcher.tsx"
+      ],
+      "#qgzpr96e58ai": [
+        "../../../src/frontend/components/domain/i18n/en.ts"
+      ],
+      "#rjehr8ul9d44": [
+        "../../frontend/components/index.ts"
+      ],
+      "#rp9g72jnwgsx": [
+        "../../../src/frontend/components/domain/accommodation/sections/other_panel.tsx"
+      ],
+      "#sl7ifwns5gtm": [
+        "../../../src/frontend/components/domain/accommodation/styles/page_info.scss"
+      ],
+      "#szv3ohtjlk5d": [
+        "../../../src/frontend/components/chrome/styles/header.scss"
+      ],
+      "#t42fgwegj1pz": [
+        "../../../src/frontend/components/domain/i18n/cs.ts"
+      ],
+      "#uzak9m0oqmxp": [
+        "../../frontend/systems.ts"
+      ],
+      "#v7fbc199m6vx": [
+        "../../../src/frontend/components/domain/accommodation/sections/about_panel.tsx"
+      ],
+      "#vfzpzm3jpkln": [
+        "../../../src/frontend/shared/lang/store.ts"
+      ],
+      "#vgmc3zaakwqc": [
+        "../../../src/frontend/components/domain/accommodation/sections/gallery.tsx"
+      ],
+      "#x3jm3224vb0o": [
+        "../../../src/frontend/components/domain/map_backdrop.tsx"
+      ],
+      "#xrzcxz8l2q7u": [
+        "../../startup/config.ts"
+      ],
+      "#y1vl6q0r0wmh": [
+        "../../../src/frontend/shared/lang/detect.ts"
+      ],
+      "#y4hpoyu2xriv": [
+        "../../../src/frontend/shared/routes.ts"
+      ],
+      "#yzchcm24vru9": [
+        "../../../src/frontend/components/domain/about_section.tsx"
+      ]
+    }
+  }
+}
