@@ -1,5 +1,6 @@
 import { createLocalTranslator } from "@trebired/i18n";
 import { Icon } from "@trebired/frontend/react";
+import type { CSSProperties } from "react";
 
 import { Button } from "#cgroy6iibw7w";
 import { ICON_ARROW_RIGHT } from "#gpkp4b4vfavh";
@@ -10,6 +11,10 @@ export function HeroSection() {
   const lang = useLang();
   const tr = createLocalTranslator(import.meta.url, lang);
 
+  const titleTop = tr("hero.titleTop");
+  const titleAccent = tr("hero.titleAccent");
+  const titleChars = Math.max(titleTop.length, titleAccent.length);
+
   return (
     <section className="hero-section">
     <MapBackdrop />
@@ -17,10 +22,10 @@ export function HeroSection() {
     <div className="hero-section-inner">
     <div className="hero-section-content">
     <div className="hero-section-copy">
-    <h1 className="hero-section-title">
-    <span className="hero-section-title-top">{tr("hero.titleTop")}</span>
+    <h1 className="hero-section-title" style={{ "--hero-title-chars": titleChars } as CSSProperties}>
+    <span className="hero-section-title-top">{titleTop}</span>
     <br />
-    <span className="hero-section-title-accent">{tr("hero.titleAccent")}</span>
+    <span className="hero-section-title-accent">{titleAccent}</span>
     </h1>
 
     <p className="hero-section-text">{tr("hero.text")}</p>

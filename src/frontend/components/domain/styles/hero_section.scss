@@ -23,13 +23,15 @@
 }
 
 .hero-section-copy {
+  container-type: inline-size;
   max-width: 36rem;
 }
 
 .hero-section-title {
+  --hero-title-max: 3.25rem;
   margin-bottom: 2rem;
   overflow-wrap: break-word;
-  font-size: clamp(1.5rem, 7.6vw, 3.25rem);
+  font-size: min(var(--hero-title-max), calc(100cqw / (var(--hero-title-chars, 10) * 0.72)));
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -38,13 +40,13 @@
 
 @media (min-width: 640px) {
   .hero-section-title {
-    font-size: 4.5rem;
+    --hero-title-max: 4.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-section-title {
-    font-size: 6rem;
+    --hero-title-max: 6rem;
   }
 }
 
