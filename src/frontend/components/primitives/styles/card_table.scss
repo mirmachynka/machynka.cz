@@ -1,0 +1,111 @@
+.card-table {
+  display: grid;
+  width: 100%;
+  background: var(--white-500);
+  grid-template-columns: 1fr;
+}
+
+.card-table-cell,
+.card-table-filler {
+  background: var(--white-500);
+  padding: 1.5rem;
+}
+
+.card-table-cell:not(:first-child) {
+  border-top: 1px solid var(--neutral-200);
+}
+
+.card-table-dark .card-table-cell,
+.card-table-dark .card-table-filler {
+  background: var(--neutral-900);
+}
+
+.card-table-dark .card-table-cell:not(:first-child) {
+  border-top-color: var(--neutral-800);
+}
+
+.card-table-filler {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .card-table-bp-sm.card-table-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-table-bp-sm.card-table-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .card-table-bp-md.card-table-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-table-bp-md.card-table-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@mixin card-table-grid-borders {
+  .card-table-cell,
+  .card-table-filler {
+    border-top-color: var(--neutral-200);
+  }
+
+  &.card-table-dark .card-table-cell,
+  &.card-table-dark .card-table-filler {
+    border-top-color: var(--neutral-800);
+  }
+
+  &.card-table-cols-2 {
+    .card-table-cell:nth-child(-n + 2),
+    .card-table-filler:nth-child(-n + 2) {
+      border-top: none;
+    }
+
+    .card-table-cell:nth-child(2n),
+    .card-table-filler:nth-child(2n) {
+      border-left: 1px solid var(--neutral-200);
+    }
+
+    &.card-table-dark .card-table-cell:nth-child(2n),
+    &.card-table-dark .card-table-filler:nth-child(2n) {
+      border-left-color: var(--neutral-800);
+    }
+  }
+
+  &.card-table-cols-3 {
+    .card-table-cell:nth-child(-n + 3),
+    .card-table-filler:nth-child(-n + 3) {
+      border-top: none;
+    }
+
+    .card-table-cell:not(:nth-child(3n + 1)),
+    .card-table-filler:not(:nth-child(3n + 1)) {
+      border-left: 1px solid var(--neutral-200);
+    }
+
+    &.card-table-dark .card-table-cell:not(:nth-child(3n + 1)),
+    &.card-table-dark .card-table-filler:not(:nth-child(3n + 1)) {
+      border-left-color: var(--neutral-800);
+    }
+  }
+
+  .card-table-filler {
+    display: block;
+  }
+}
+
+@media (min-width: 640px) {
+  .card-table-bp-sm {
+    @include card-table-grid-borders;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-table-bp-md {
+    @include card-table-grid-borders;
+  }
+}

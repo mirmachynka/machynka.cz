@@ -1,0 +1,39 @@
+.lang-switch {
+  display: inline-flex;
+}
+
+.lang-trigger {
+  gap: 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lang-flag {
+  flex: 0 0 auto;
+}
+
+.lang-code {
+  line-height: 1;
+}
+
+.lang-caret {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.12rem) rotate(45deg);
+  opacity: 0.65;
+}
+
+.lang-menu button {
+  gap: 0.7rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.lang-menu button.active {
+  background: var(--surface-2);
+  color: var(--text-color);
+}

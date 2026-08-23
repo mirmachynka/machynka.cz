@@ -1,0 +1,78 @@
+.section-title-light {
+  color: var(--white-500);
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-500);
+}
+
+.section-title {
+  overflow-wrap: break-word;
+  font-size: 1.875rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--neutral-900);
+}
+
+@media (min-width: 380px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 4.5rem;
+  }
+}
+
+.map-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.map-backdrop-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 55% 50%;
+  opacity: 0.8;
+}
+
+.map-backdrop-scrim {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in oklch, var(--neutral-900), transparent 72%);
+}
+
+.map-backdrop-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 18% 42%,
+    color-mix(in oklch, var(--neutral-900), transparent 62%) 0,
+    color-mix(in oklch, var(--neutral-900), transparent 84%) 36%,
+    transparent 68%
+  );
+}
+
+@media (min-width: 768px) {
+  .map-backdrop-image {
+    object-position: 95% 50%;
+  }
+}

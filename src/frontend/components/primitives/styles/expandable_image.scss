@@ -1,0 +1,173 @@
+.expandable-image {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  background: var(--neutral-100);
+  text-align: left;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.expandable-image:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--primary-500), transparent 55%);
+}
+
+.expandable-image-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.expandable-image:hover .expandable-image-img {
+  transform: scale(1.05);
+}
+
+.expandable-image-expand-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  background: oklch(14.5% 0 0 / 70%);
+  color: var(--white-500);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.expandable-image-expand-icon .icon-glyph {
+  font-size: 1rem;
+}
+
+.expandable-image:hover .expandable-image-expand-icon,
+.expandable-image:focus-visible .expandable-image-expand-icon {
+  opacity: 1;
+}
+
+.expandable-image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: oklch(14.5% 0 0 / 88%);
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.expandable-image-lightbox-visible {
+  opacity: 1;
+}
+
+.expandable-image-close,
+.expandable-image-nav {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: oklch(14.5% 0 0 / 35%);
+  color: var(--white-500);
+  backdrop-filter: blur(4px);
+  border: none;
+  transition: background-color 180ms ease;
+}
+
+.expandable-image-close:hover,
+.expandable-image-nav:hover {
+  background: color-mix(in oklch, var(--primary-500), transparent 30%);
+}
+
+.expandable-image-close {
+  right: 1rem;
+  top: 1rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.expandable-image-close .icon-glyph {
+  font-size: 1.25rem;
+}
+
+.expandable-image-nav {
+  top: 50%;
+  height: 3rem;
+  width: 3rem;
+  transform: translateY(-50%);
+  box-shadow: 0 25px 50px -12px oklch(0% 0 0 / 25%);
+}
+
+.expandable-image-nav .icon-glyph {
+  font-size: 1.5rem;
+}
+
+.expandable-image-nav-prev {
+  left: 1rem;
+}
+
+.expandable-image-nav-next {
+  right: 1rem;
+}
+
+.expandable-image-viewer {
+  position: relative;
+  display: flex;
+  max-width: min(94vw, 76rem);
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.95);
+  opacity: 0;
+  transition:
+  opacity 300ms ease-out,
+  transform 300ms ease-out;
+}
+
+.expandable-image-viewer-visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.expandable-image-viewer-img {
+  height: auto;
+  max-height: 86vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  box-shadow: 0 25px 50px -12px oklch(0% 0 0 / 25%);
+}
+
+.expandable-image-caption {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: oklch(100% 0 0 / 70%);
+}
+
+@media (min-width: 640px) {
+  .expandable-image-close {
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .expandable-image-nav {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .expandable-image-nav-prev {
+    left: 1.5rem;
+  }
+
+  .expandable-image-nav-next {
+    right: 1.5rem;
+  }
+}

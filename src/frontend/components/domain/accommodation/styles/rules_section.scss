@@ -1,0 +1,33 @@
+.accommodation-rules-intro {
+  max-width: 48rem;
+  line-height: 1.6;
+  color: var(--neutral-600);
+}
+
+.accommodation-rules-table {
+  margin-top: 2rem;
+}
+
+.accommodation-rules-title {
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--neutral-900);
+}
+
+.accommodation-rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accommodation-rules-list li {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--neutral-600);
+}

@@ -1,72 +1,53 @@
 {
-  "dependencies": {
-    "@radix-ui/react-slot": "1.2.4",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "flag-icons": "^7.5.0",
-    "i18next": "^26.3.6",
-    "lucide-react": "^0.564.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "react-i18next": "^17.0.9",
-    "tailwind-merge": "^3.3.1",
-    "tw-animate-css": "1.3.3"
+  "author": "Miroslav Machynka (Trebired)",
+  "config": {
+    "organization": {
+      "displayName": "Trebired",
+      "name": "trebired",
+      "website": "https://trebired.com"
+    },
+    "product": {
+      "displayName": "machynka.cz",
+      "name": "machynka-cz",
+      "website": "https://machynka.cz"
+    }
   },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.0",
-    "@trebired/code-discipline": "3.1.2",
-    "@types/node": "^22",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "^4.7.0",
-    "postcss": "^8.5",
-    "sass": "^1.101.0",
-    "tailwindcss": "^4.2.0",
-    "typescript": "5.7.3",
-    "vite": "^5.4.21"
-  },
-  "imports": {
-    "#21jt6f6rfpio": "./components/lang-switcher.tsx",
-    "#29xjkjqfmplv": "./tb.code-discipline.ts",
-    "#2qup6n9nvxmj": "./components/about-section.tsx",
-    "#66z9u75y229h": "./src/App.tsx",
-    "#6mgoet028ni5": "./src/i18n/index.ts",
-    "#6q8akrppmz4a": "./src/router.tsx",
-    "#8l6jzcwzcb6n": "./src/i18n/resources/cs.ts",
-    "#a8yacvwogyxm": "./components/ui/button.tsx",
-    "#b1tsq4glstsf": "./components/properties-section.tsx",
-    "#b4oxevzt35f6": "./src/shared/lang.ts",
-    "#d2wjwjjj01k1": "./components/google-map-embed.tsx",
-    "#ea1ieiw65t9h": "./src/shared/routes.ts",
-    "#hi9lz6pfjofm": "./components/contact-section.tsx",
-    "#ipj2r913vrrn": "./components/header.tsx",
-    "#iuaca3ba18pt": "./components/accommodation/rules-section.tsx",
-    "#kjf6v0lh8myc": "./lib/contact-info.ts",
-    "#mup75rs1n2ym": "./components/expandable-image.tsx",
-    "#q5o02e96xsl4": "./src/main.tsx",
-    "#rrf8g6i9biz3": "./components/benefits-section.tsx",
-    "#tptury9eqoo3": "./lib/accommodations.ts",
-    "#uipjrzb4924c": "./components/hero-section.tsx",
-    "#up1tprjis1xy": "./lib/utils.ts",
-    "#viqfxa10uoso": "./components/card-table.tsx",
-    "#vqyappdcupdr": "./src/i18n/resources/site.ts",
-    "#wmufre5pe8pj": "./vite.config.ts",
-    "#wn4njv22f8z0": "./components/footer.tsx",
-    "#xeob3owuhmtf": "./src/i18n/resources/en.ts",
-    "#xolky1luocxg": "./components/accommodation/page.tsx"
-  },
-  "name": "my-project",
+  "name": "machynka-cz",
+  "version": "1.0.0",
+  "description": "Marketing site for MACHYNKA s.r.o. accommodation in Bu\u010dovice. React frontend, static build, no backend.",
+  "type": "module",
   "private": true,
+  "license": "MIT",
+  "packageManager": "bun@1.3.14",
+  "engines": {
+    "bun": ">=1.0.0"
+  },
   "scripts": {
-    "build": "vite build",
-    "dev": "code-discipline gate -- vite",
+    "dev": "code-discipline gate -- bun --hot src/bin/dev.ts",
+    "build": "bun src/bin/frontend/build.ts client",
     "discipline:check": "code-discipline check",
     "discipline:fix": "code-discipline fix",
-    "lint": "eslint .",
-    "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "verify": "bun run discipline:check && bun run typecheck && bun run build"
   },
-  "type": "module",
-  "version": "0.1.0"
+  "dependencies": {
+    "@fontsource/geist": "^5.3.0",
+    "@trebired/bundler": "^5.8.0",
+    "@trebired/frontend": "^11.6.2",
+    "@trebired/i18n": "^0.5.5",
+    "@trebired/startup": "^0.6.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@trebired/code-discipline": "^7.0.3",
+    "@trebired/configs": "^0.2.2",
+    "@types/bun": "^1.4.0",
+    "@types/node": "^22.20.1",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@trebired/logger": "^2.5.32",
+    "sass": "^1.103.1",
+    "typescript": "5.7.3"
+  }
 }

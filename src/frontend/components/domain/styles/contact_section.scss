@@ -1,0 +1,269 @@
+.contact-section {
+  padding-block: 6rem;
+  background: var(--white-500);
+}
+
+.contact-section-inner {
+  display: grid;
+  gap: 4rem;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: var(--tbf-container-px);
+  grid-template-columns: 1fr;
+}
+
+.contact-section-title {
+  margin-bottom: 2rem;
+}
+
+.contact-section-text {
+  margin-bottom: 2.5rem;
+  max-width: 28rem;
+  line-height: 1.6;
+  color: var(--neutral-600);
+}
+
+.contact-section-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--neutral-100);
+  padding: 1rem;
+  transition: background-color 180ms ease;
+}
+
+.contact-link:hover {
+  background: var(--primary-500);
+}
+
+.contact-link-icon {
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-500);
+}
+
+.contact-link-icon .icon-glyph {
+  font-size: 1.5rem;
+  color: var(--neutral-900);
+}
+
+.contact-link-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.contact-link-label {
+  margin-bottom: 0.25rem;
+  overflow-wrap: break-word;
+  font-size: 0.625rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--neutral-500);
+  transition: color 180ms ease;
+}
+
+.contact-link:hover .contact-link-label {
+  color: color-mix(in srgb, white 70%, transparent);
+}
+
+.contact-link-value {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--neutral-900);
+  transition: color 180ms ease;
+}
+
+.contact-link-value-email {
+  overflow-wrap: anywhere;
+  font-size: 1.125rem;
+}
+
+.contact-link:hover .contact-link-value {
+  color: var(--white-500);
+}
+
+.contact-link-arrow {
+  height: 1.25rem;
+  width: 1.25rem;
+  flex-shrink: 0;
+  color: var(--neutral-400);
+  transition: color 180ms ease;
+}
+
+.contact-link:hover .contact-link-arrow {
+  color: var(--white-500);
+}
+
+.contact-section-map {
+  position: relative;
+  margin-top: 2rem;
+  min-height: 360px;
+  overflow: hidden;
+  background: var(--neutral-100);
+}
+
+.contact-section-map-frame {
+  position: absolute;
+  inset: 0;
+}
+
+.contact-section-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-panel {
+  background: var(--neutral-900);
+  padding: 1.5rem;
+}
+
+.contact-panel-title {
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  font-size: 1.125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--white-500);
+}
+
+.contact-panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-panel-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-panel-icon {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  background: var(--neutral-800);
+}
+
+.contact-panel-icon .icon-glyph {
+  font-size: 1rem;
+  color: var(--primary-500);
+}
+
+.contact-panel-name {
+  font-weight: 700;
+  color: var(--white-500);
+}
+
+.contact-panel-detail {
+  font-size: 0.875rem;
+  color: var(--neutral-400);
+}
+
+.contact-panel-note {
+  margin-top: 1.25rem;
+  max-width: 28rem;
+  background: var(--primary-500);
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--white-500);
+}
+
+.contact-panel-divider {
+  border-top: 1px solid var(--neutral-800);
+  padding-top: 1rem;
+}
+
+.contact-panel-label {
+  margin-bottom: 0.75rem;
+  overflow-wrap: break-word;
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--neutral-500);
+}
+
+.contact-panel-operator {
+  font-size: 0.875rem;
+  color: var(--neutral-400);
+}
+
+.contact-panel-legal-row {
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .contact-section {
+    padding-block: 8rem;
+  }
+
+  .contact-section-text {
+    font-size: 1.125rem;
+  }
+
+  .contact-link {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .contact-link-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .contact-link-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  .contact-link-value {
+    font-size: 1.5rem;
+  }
+
+  .contact-link-value-email {
+    font-size: 1.5rem;
+  }
+
+  .contact-link-arrow {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .contact-panel {
+    padding: 2.5rem;
+  }
+
+  .contact-panel-title {
+    font-size: 1.25rem;
+  }
+
+  .contact-panel-label {
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-section-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,132 @@
+.about-section {
+  padding-block: 6rem;
+  background: var(--white-500);
+}
+
+.about-section-inner {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: var(--tbf-container-px);
+}
+
+.about-section-grid {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+.about-section-title {
+  margin-bottom: 2rem;
+}
+
+.about-section-text {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--neutral-600);
+}
+
+.about-section-stats {
+  display: grid;
+  margin-top: 2.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.75rem;
+}
+
+.about-section-stat {
+  background: var(--neutral-100);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.about-section-stat .icon-glyph {
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: var(--neutral-900);
+}
+
+.about-section-stat-label {
+  overflow-wrap: break-word;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--neutral-900);
+}
+
+.about-section-quote-card {
+  background: var(--neutral-900);
+  padding: 1.5rem;
+}
+
+.about-section-quote-border {
+  border-left: 4px solid var(--primary-500);
+  padding-left: 1.25rem;
+}
+
+.about-section-quote {
+  overflow-wrap: break-word;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--white-500);
+}
+
+.about-section-quote-source {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: color-mix(in oklch, var(--white-500), transparent 30%);
+}
+
+@media (min-width: 380px) {
+  .about-section-quote {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 420px) {
+  .about-section-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 640px) {
+  .about-section {
+    padding-block: 8rem;
+  }
+
+  .about-section-text {
+    font-size: 1.125rem;
+  }
+
+  .about-section-stats {
+    gap: 1rem;
+  }
+
+  .about-section-stat {
+    padding: 1.5rem;
+  }
+
+  .about-section-quote-card {
+    padding: 3rem;
+  }
+
+  .about-section-quote-border {
+    padding-left: 2rem;
+  }
+
+  .about-section-quote {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-section-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
