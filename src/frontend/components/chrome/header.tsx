@@ -5,7 +5,6 @@ import { useState } from "react";
 import { contactInfo, phoneHref } from "#aequr96wfpxz";
 import { ICON_MENU, ICON_PHONE, ICON_CLOSE } from "#gpkp4b4vfavh";
 import { useLang } from "#n99t4onl5ufo";
-import { Link } from "#eww9luqvc386";
 import { LangSwitcher } from "./lang_switcher";
 import { navItems, type NavItem } from "./nav_items";
 
@@ -16,15 +15,15 @@ type HeaderNavProps = {
 function HeaderDesktopRow({ links, open, onToggle }: HeaderNavProps & { onToggle: () => void; open: boolean }) {
   return (
     <div className="site-header-row">
-    <Link href="/" className="site-header-brand">
+    <a href="/" className="site-header-brand" data-tbf-soft-redirect="">
     <img src="/logo.svg" alt="MACHYNKA s.r.o." className="site-header-logo" />
-    </Link>
+    </a>
 
     <nav className="site-header-nav">
     {links.map((link) => (
-          <Link key={link.href} href={link.href} className="site-header-link">
+          <a key={link.href} href={link.href} className="site-header-link" data-tbf-soft-redirect="">
           {link.label}
-          </Link>
+          </a>
     ))}
     </nav>
 
@@ -48,15 +47,16 @@ function HeaderMobileMenu({ links, open, onNavigate }: HeaderNavProps & { onNavi
     <div className={`site-header-mobile ${open ? "site-header-mobile-open" : ""}`} aria-hidden={!open}>
     <div className="site-header-mobile-inner" data-dropdown-boundary>
     {links.map((link) => (
-          <Link
+          <a
           key={link.href}
           href={link.href}
           className="site-header-mobile-link"
-          onClick={onNavigate}
+          onClickCapture={onNavigate}
           tabIndex={open ? 0 : -1}
+          data-tbf-soft-redirect=""
           >
           {link.label}
-          </Link>
+          </a>
     ))}
     <div className="site-header-mobile-footer">
     <a href={phoneHref(contactInfo.accommodationPhone)} className="site-header-mobile-phone" tabIndex={open ? 0 : -1}>
@@ -77,11 +77,11 @@ export function Header() {
   const links = navItems(tr);
 
   return (
-    <header className="site-header">
+    <>
     <div className="site-header-bar">
     <HeaderDesktopRow links={links} open={mobileMenuOpen} onToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
     </div>
     <HeaderMobileMenu links={links} open={mobileMenuOpen} onNavigate={() => setMobileMenuOpen(false)} />
-    </header>
+    </>
   );
 }

@@ -1,7 +1,8 @@
 node_modules/
 dist/
+.ssr/
 *.tgz
 .env
 .env.*
 cd-report-*.txt
-.trebired/code-discipline/generated/
+.trebired/code-discipline/generated/reports/

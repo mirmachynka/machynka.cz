@@ -5,6 +5,7 @@ import { createLog } from "@trebired/logger";
 
 import bundlerOptions from "#10mmcc87u9zo";
 import { allRoutePaths, metaFor } from "#y4hpoyu2xriv";
+import { renderRouteBodies } from "./ssr";
 import { withExtraHeadTags } from "./shell";
 
 const target = (process.argv[2] || "client") as "all" | "client" | "ssr";
@@ -20,10 +21,11 @@ const logger = createLog({
 
 const config = defineConfig({ ...bundlerOptions, mode: "production" });
 const build = await buildFrontendApp({ ...config, target });
+const routeBodies = await renderRouteBodies();
 
 const routes = allRoutePaths().map((path) => {
     const meta = metaFor(path, "cs");
-    return { path, meta: { description: meta.description, title: meta.title } };
+    return { path, body: routeBodies[path], meta: { description: meta.description, title: meta.title } };
 });
 
 const shell = await buildStaticShell({

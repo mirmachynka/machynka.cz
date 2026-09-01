@@ -3,12 +3,14 @@
 import path from "node:path";
 
 import { buildFrontendApp, buildStaticShell, createBunStaticAssetHandler, defineConfig } from "@trebired/bundler/frontend-app";
+import { readProcessEnvValue } from "@trebired/env";
 import { createLog } from "@trebired/logger";
 import { runStartup } from "@trebired/startup";
-import { readProcessEnvValue, readProductIdentity, toPortNumber } from "@trebired/utils";
+import { readProductIdentity, toPortNumber } from "@trebired/utils";
 
 import bundlerOptions from "#10mmcc87u9zo";
 import { allRoutePaths, metaFor } from "#y4hpoyu2xriv";
+import { renderRouteBodies } from "./frontend/ssr";
 import { withExtraHeadTags } from "./frontend/shell";
 
 type ServedConfig = Awaited<ReturnType<typeof rebuild>>;
@@ -29,9 +31,10 @@ async function rebuild() {
 
   const config = defineConfig({ ...bundlerOptions, mode: "development" });
   const build = await buildFrontendApp({ ...config, target: "client" });
+  const routeBodies = await renderRouteBodies();
   const routes = allRoutePaths().map((route) => {
       const meta = metaFor(route, "cs");
-      return { path: route, meta: { description: meta.description, title: meta.title } };
+      return { path: route, body: routeBodies[route], meta: { description: meta.description, title: meta.title } };
   });
   const shell = await buildStaticShell({ build, config, meta: { lang: "cs" }, routes });
 

@@ -24,7 +24,7 @@ function storedLang(): SupportedLang | "" {
 }
 
 function detectInitialLang(): Lang {
-  if (typeof window === "undefined") return "en";
+  if (typeof window === "undefined") return "cs";
 
   const stored = storedLang();
   if (stored) return stored;

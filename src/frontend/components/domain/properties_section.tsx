@@ -5,14 +5,13 @@ import { createAccommodationTranslator } from "./accommodation/translator";
 import { ICON_ARROW_UP_RIGHT } from "#gpkp4b4vfavh";
 import { accommodations, type Accommodation } from "#2ajuusged5jk";
 import { useLang } from "#n99t4onl5ufo";
-import { Link } from "#eww9luqvc386";
 
 function PropertyCard({ property, ta, tr }: { property: Accommodation; ta: I18nTranslator; tr: I18nTranslator }) {
   const name = ta(`accommodations.${property.id}.name`);
   const description = ta(`accommodations.${property.id}.description`);
 
   return (
-    <Link href={property.path} className="property-card">
+    <a href={property.path} className="property-card" data-tbf-soft-redirect="">
     <div className="property-card-media">
     <img src={property.exteriorImage} alt={name} loading="lazy" className="property-card-image" />
     <div className="property-card-scrim" />
@@ -23,8 +22,10 @@ function PropertyCard({ property, ta, tr }: { property: Accommodation; ta: I18nT
     </div>
 
     <div className="property-card-body">
+    <div className="property-card-heading">
     <h3 className="property-card-title">{name}</h3>
     <p className="property-card-description">{description}</p>
+    </div>
 
     <div className="property-card-features">
     {property.features.map((feature, featureIndex) => (
@@ -42,7 +43,7 @@ function PropertyCard({ property, ta, tr }: { property: Accommodation; ta: I18nT
     <span className="property-card-detail">{tr("properties.detail")}</span>
     </div>
     </div>
-    </Link>
+    </a>
   );
 }
 
@@ -55,7 +56,6 @@ export function PropertiesSection() {
     <section id="ubytovani" className="properties-section">
     <div className="properties-section-inner">
     <div className="properties-section-head">
-    <span className="section-label">{tr("properties.label")}</span>
     <h2 className="section-title">{tr("properties.title")}</h2>
     </div>
 

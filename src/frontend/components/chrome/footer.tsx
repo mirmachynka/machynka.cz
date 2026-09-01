@@ -4,16 +4,17 @@ import { Icon } from "@trebired/frontend/react";
 import { contactInfo, phoneHref } from "#aequr96wfpxz";
 import { ICON_MAIL, ICON_MAP_PIN, ICON_PHONE } from "#gpkp4b4vfavh";
 import { useLang } from "#n99t4onl5ufo";
-import { Link } from "#eww9luqvc386";
 import { navItems } from "./nav_items";
 
 function FooterBrandColumn({ tr }: { tr: I18nTranslator }) {
   return (
     <div className="site-footer-brand-col">
-    <Link href="/" className="site-footer-brand">
+    <div className="site-footer-brand-group">
+    <a href="/" className="site-footer-brand" data-tbf-soft-redirect="">
     <img src="/footer-logo.svg" alt="MACHYNKA s.r.o." className="site-footer-logo" />
-    </Link>
+    </a>
     <p className="site-footer-text">{tr("footer.text")}</p>
+    </div>
     <a href={phoneHref(contactInfo.accommodationPhone)} className="site-footer-phone">
     <Icon spec={ICON_PHONE} />
     {contactInfo.accommodationPhone}
@@ -24,13 +25,13 @@ function FooterBrandColumn({ tr }: { tr: I18nTranslator }) {
 
 function FooterNavColumn({ links, tr }: { links: ReturnType<typeof navItems>; tr: I18nTranslator }) {
   return (
-    <div>
+    <div className="site-footer-column">
     <h4 className="site-footer-heading">{tr("footer.navigation")}</h4>
     <nav className="site-footer-nav">
     {links.map((link) => (
-          <Link key={link.href} href={link.href} className="site-footer-nav-link">
+          <a key={link.href} href={link.href} className="site-footer-nav-link" data-tbf-soft-redirect="">
           {link.label}
-          </Link>
+          </a>
     ))}
     </nav>
     </div>
@@ -39,7 +40,7 @@ function FooterNavColumn({ links, tr }: { links: ReturnType<typeof navItems>; tr
 
 function FooterContactColumn({ tr }: { tr: I18nTranslator }) {
   return (
-    <div>
+    <div className="site-footer-column">
     <h4 className="site-footer-heading">{tr("footer.contactLabel")}</h4>
     <div className="site-footer-contact">
     <div className="site-footer-contact-row">
@@ -63,7 +64,6 @@ export function Footer() {
   const links = navItems(tr);
 
   return (
-    <footer className="site-footer">
     <div className="site-footer-inner">
     <div className="site-footer-grid">
     <FooterBrandColumn tr={tr} />
@@ -75,6 +75,5 @@ export function Footer() {
     <p className="site-footer-copy">© 2026 MACHYNKA s.r.o. {tr("footer.rights")}</p>
     </div>
     </div>
-    </footer>
   );
 }

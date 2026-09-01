@@ -4,7 +4,6 @@ import type { I18nTranslator } from "@trebired/i18n";
 import { Button } from "#cgroy6iibw7w";
 import type { Accommodation } from "#2ajuusged5jk";
 import { ICON_ARROW_LEFT, ICON_ARROW_RIGHT } from "#gpkp4b4vfavh";
-import { Link } from "#eww9luqvc386";
 import { MapBackdrop } from "#x3jm3224vb0o";
 
 type HeroProps = {
@@ -21,11 +20,11 @@ export function AccommodationHero({ accommodation, detail, mapAddress, name, tr 
     <MapBackdrop />
 
     <div className="accommodation-hero-inner">
-    <div>
-    <Link href="/#ubytovani" className="accommodation-back-link">
+    <div className="accommodation-hero-copy">
+    <a href="/#ubytovani" className="accommodation-back-link" data-tbf-soft-redirect="">
     <Icon spec={ICON_ARROW_LEFT} />
     {tr("common.backToAccommodation")}
-    </Link>
+    </a>
     <h1 className="accommodation-hero-title">{name}</h1>
     <p className="accommodation-hero-detail">{detail}</p>
     <div className="accommodation-hero-actions">

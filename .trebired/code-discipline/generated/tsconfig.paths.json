@@ -13,9 +13,6 @@
       "#10mmcc87u9zo": [
         "../../bundler/config.ts"
       ],
-      "#1rocd7vlhz94": [
-        "../../../src/frontend/app.tsx"
-      ],
       "#2ajuusged5jk": [
         "../../../src/frontend/shared/accommodations.ts"
       ],
@@ -33,6 +30,9 @@
       ],
       "#6sb7guuby63q": [
         "../../../src/frontend/js/index.client.tsx"
+      ],
+      "#6zkiijbcfna0": [
+        "../../../src/frontend/shared/content_island.tsx"
       ],
       "#73gud44onpde": [
         "../../../src/frontend/components/primitives/styles/card_table.scss"
@@ -94,9 +94,6 @@
       "#ekdftwan41xj": [
         "../../../src/frontend/components/domain/hero_section.tsx"
       ],
-      "#eww9luqvc386": [
-        "../../../src/frontend/shared/router.tsx"
-      ],
       "#f0h50srahwn1": [
         "../../../src/frontend/components/chrome/i18n/en.ts"
       ],
@@ -124,6 +121,9 @@
       "#i0bvtbidf4kj": [
         "../../frontend/tokens.ts"
       ],
+      "#iacmuxrimql0": [
+        "../../../src/frontend/shared/page_content.tsx"
+      ],
       "#jpydwvtclrzh": [
         "../../../src/frontend/components/chrome/footer.tsx"
       ],
@@ -132,6 +132,9 @@
       ],
       "#ko1s2pcqme9v": [
         "../../../src/frontend/components/domain/properties_section.tsx"
+      ],
+      "#l4l0r3zyfxh7": [
+        "../../../src/frontend/ssr/entry.tsx"
       ],
       "#l5fyaqigsm8q": [
         "../../../src/frontend/components/chrome/nav_items.ts"
@@ -165,6 +168,9 @@
       ],
       "#oq3el5biuo0q": [
         "../../../src/frontend/components/primitives/expandable_image.tsx"
+      ],
+      "#p1ba2rs26ml3": [
+        "../../../src/bin/frontend/ssr.ts"
       ],
       "#plsr0hqod53h": [
         "../../../src/frontend/components/chrome/styles/lang_switcher.scss"

@@ -1,8 +1,6 @@
 import { frontendClassName, surfaceClass } from "@trebired/frontend";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 
-import { Link } from "#eww9luqvc386";
-
 type ButtonVariant = "dark" | "outline" | "primary" | "white";
 
 type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -24,8 +22,8 @@ export function Button({ children, className, href, variant = "primary", ...rest
   const classes = [base, `btn-${variant}`, className].filter(Boolean).join(" ");
 
   return (
-    <Link href={href} className={classes} {...rest}>
+    <a href={href} className={classes} data-tbf-soft-redirect="" {...rest}>
     {children}
-    </Link>
+    </a>
   );
 }
