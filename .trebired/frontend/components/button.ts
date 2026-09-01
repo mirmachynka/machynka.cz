@@ -1,7 +1,10 @@
+import type { FrontendPaletteStep } from "@trebired/frontend/config";
+
 import { semantic, token, ui } from "#i0bvtbidf4kj";
+import { palette } from "#lub199gl3q3w";
 
 const white = token.color("white", "500");
-const neutral = (step: string) => token.color("neutral", step);
+const neutral = (step: FrontendPaletteStep<typeof palette, "neutral">) => token.color("neutral", step);
 
 export const button = {
   root: {
