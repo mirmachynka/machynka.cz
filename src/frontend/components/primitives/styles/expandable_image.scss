@@ -123,6 +123,7 @@
   max-width: min(94vw, 76rem);
   flex-direction: column;
   align-items: center;
+  gap: var(--tbf-gap-sm);
   transform: scale(0.95);
   opacity: 0;
   transition:
@@ -145,7 +146,6 @@
 }
 
 .expandable-image-caption {
-  margin-top: 1rem;
   text-align: center;
   font-size: 0.875rem;
   font-weight: 700;

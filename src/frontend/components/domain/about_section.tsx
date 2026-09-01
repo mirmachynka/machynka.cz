@@ -11,16 +11,14 @@ export function AboutSection() {
   return (
     <section id="o-nas" className="about-section">
     <div className="about-section-inner">
+    <h2 className="section-title about-section-title">{tr("about.title")}</h2>
+
     <div className="about-section-grid">
-    <div>
-    <span className="section-label">{tr("about.label")}</span>
-    <h2 className="section-title about-section-title">
-    {tr("about.titleTop")}
-    <br />
-    {tr("about.titleBottom")}
-    </h2>
+    <div className="about-section-copy">
+    <div className="about-section-text-group">
     <p className="about-section-text">{tr("about.text1")}</p>
     <p className="about-section-text">{tr("about.text2")}</p>
+    </div>
 
     <div className="about-section-stats">
     <div className="about-section-stat">

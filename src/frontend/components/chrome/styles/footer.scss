@@ -1,10 +1,12 @@
 .site-footer {
+  display: flex;
+  justify-content: center;
   border-top: 1px solid var(--neutral-800);
   background: var(--neutral-900);
 }
 
 .site-footer-inner {
-  margin-inline: auto;
+  width: 100%;
   max-width: 80rem;
   padding-inline: var(--tbf-container-px);
 }
@@ -17,12 +19,22 @@
 }
 
 .site-footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tbf-gap-lg);
   grid-column: span 1;
+}
+
+.site-footer-brand-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tbf-gap-md);
 }
 
 .site-footer-brand {
   display: inline-flex;
-  margin-bottom: 1.5rem;
 }
 
 .site-footer-logo {
@@ -34,9 +46,14 @@
 
 .site-footer-text {
   max-width: 24rem;
-  margin-bottom: 2rem;
   line-height: 1.6;
   color: var(--neutral-400);
+}
+
+.site-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tbf-gap-md);
 }
 
 .site-footer-phone {
@@ -61,7 +78,6 @@
 }
 
 .site-footer-heading {
-  margin-bottom: 1.5rem;
   font-size: 0.875rem;
   font-weight: 900;
   color: var(--white-500);
@@ -101,7 +117,7 @@
 .site-footer-contact-row .icon-glyph {
   font-size: 1rem;
   flex-shrink: 0;
-  margin-top: 0.25rem;
+  transform: translateY(0.25rem);
   color: var(--primary-500);
 }
 

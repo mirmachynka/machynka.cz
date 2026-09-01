@@ -14,9 +14,7 @@ export default defineMessages({
       },
     },
     about: {
-      label: "About",
-      titleTop: "ACCOMMODATION",
-      titleBottom: "IN BUČOVICE",
+      title: "ACCOMMODATION IN BUČOVICE",
       text1: "We offer practical accommodation in Bučovice with an emphasis on comfort, cleanliness and good accessibility.",
       text2: "Guests can choose between two accommodation properties: Apartmány Libuše with 17 rooms and Penzion Machynka with 18 rooms.",
       quote: "Your comfort is our priority",
@@ -28,13 +26,11 @@ export default defineMessages({
       },
     },
     properties: {
-      label: "Accommodation",
       title: "OUR PROPERTIES",
       detail: "Detail",
       roomsCount: "{{count}} rooms",
     },
     benefits: {
-      label: "Why us",
       title: "WHAT WE OFFER",
       items: {
         comfort: { title: "Comfort", description: "Modernly equipped rooms with an emphasis on quality and comfort." },
@@ -47,8 +43,7 @@ export default defineMessages({
     },
     contactSection: {
       label: "Contact",
-      titleTop: "GET IN",
-      titleBottom: "TOUCH",
+      title: "GET IN TOUCH",
       text: "Have questions about accommodation? We will gladly help with your reservation or answer your questions. In-person reservations and " +
         "check-in are handled at the main company building.",
       accommodationPhone: "Accommodation phone",

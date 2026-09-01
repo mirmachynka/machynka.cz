@@ -14,9 +14,7 @@ export default defineMessages({
       },
     },
     about: {
-      label: "O nás",
-      titleTop: "UBYTOVÁNÍ",
-      titleBottom: "V BUČOVICÍCH",
+      title: "UBYTOVÁNÍ V BUČOVICÍCH",
       text1: "Nabízíme praktické ubytování v Bučovicích s důrazem na pohodlí, čistotu a dobrou dostupnost.",
       text2: "Hosté si mohou vybrat ze dvou ubytovacích objektů: Apartmány Libuše se 17 pokoji a Penzion Machynka s 18 pokoji.",
       quote: "Váš komfort je naší prioritou",
@@ -28,13 +26,11 @@ export default defineMessages({
       },
     },
     properties: {
-      label: "Ubytování",
       title: "NAŠE OBJEKTY",
       detail: "Detail",
       roomsCount: "{{count}} pokojů",
     },
     benefits: {
-      label: "Proč my",
       title: "CO NABÍZÍME",
       items: {
         comfort: { title: "Komfort", description: "Moderně vybavené pokoje s důrazem na kvalitu a pohodlí." },
@@ -47,8 +43,7 @@ export default defineMessages({
     },
     contactSection: {
       label: "Kontakt",
-      titleTop: "SPOJTE SE",
-      titleBottom: "S NÁMI",
+      title: "SPOJTE SE S NÁMI",
       text: "Máte dotazy ohledně ubytování? Rádi vám pomůžeme s rezervací nebo zodpovíme vaše otázky. Osobní rezervace a příjezdy řešíme v hlavní " +
         "budově firmy.",
       accommodationPhone: "Telefonní kontakt pro ubytování",

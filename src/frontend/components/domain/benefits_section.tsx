@@ -22,7 +22,6 @@ export function BenefitsSection() {
     <section className="benefits-section">
     <div className="benefits-section-inner">
     <div className="benefits-section-head">
-    <span className="section-label">{tr("benefits.label")}</span>
     <h2 className="section-title section-title-light">{tr("benefits.title")}</h2>
     </div>
 
@@ -37,8 +36,10 @@ export function BenefitsSection() {
         <div className="benefit-card-icon">
         <Icon spec={icon} />
         </div>
+        <div className="benefit-card-text-group">
         <h3 className="benefit-card-title">{tr(`benefits.items.${key}.title`)}</h3>
         <p className="benefit-card-description">{tr(`benefits.items.${key}.description`)}</p>
+        </div>
         </>
     )}
     />

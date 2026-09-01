@@ -2,6 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 50;
+  display: flex;
+  justify-content: center;
   overflow: visible;
   border-bottom: 1px solid var(--neutral-200);
   background: var(--white-500);
@@ -10,7 +12,7 @@
 .site-header-bar {
   position: relative;
   z-index: 10;
-  margin-inline: auto;
+  width: 100%;
   max-width: 80rem;
   padding-inline: var(--tbf-container-px);
   background: var(--white-500);
@@ -139,6 +141,10 @@
 }
 
 .site-header-mobile-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tbf-gap-sm);
   padding-top: 1rem;
   border-top: 1px solid var(--neutral-200);
 }
@@ -147,7 +153,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 700;
   color: var(--neutral-900);

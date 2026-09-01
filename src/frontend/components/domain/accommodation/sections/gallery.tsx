@@ -14,10 +14,7 @@ export function AccommodationGallery({ images, name, tr }: GalleryProps) {
   return (
     <section className="accommodation-gallery">
     <div className="accommodation-gallery-inner">
-    <div className="accommodation-gallery-head">
-    <span className="section-label">{tr("accommodationPage.galleryLabel")}</span>
     <h2 className="section-title">{tr("accommodationPage.galleryTitle")}</h2>
-    </div>
 
     <div className="accommodation-gallery-grid">
     {images.map((image, index) => (

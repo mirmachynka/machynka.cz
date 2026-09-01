@@ -14,14 +14,7 @@ export function AccommodationFeatures({ accommodation, baseKey, tr }: FeaturesPr
   return (
     <section className="accommodation-features">
     <div className="accommodation-features-inner">
-    <div>
-    <span className="section-label">{tr("accommodationPage.featuresLabel")}</span>
-    <h2 className="section-title">
-    {tr("accommodationPage.featuresTitleTop")}
-    <br />
-    {tr("accommodationPage.featuresTitleBottom")}
-    </h2>
-    </div>
+    <h2 className="section-title">{tr("accommodationPage.featuresTitle")}</h2>
 
     <CardTable
     items={accommodation.features}

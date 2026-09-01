@@ -1,23 +1,32 @@
 .contact-section {
+  display: flex;
+  justify-content: center;
   padding-block: 6rem;
   background: var(--white-500);
 }
 
 .contact-section-inner {
-  display: grid;
-  gap: 4rem;
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tbf-gap-lg);
+  width: 100%;
   max-width: 80rem;
   padding-inline: var(--tbf-container-px);
+}
+
+.contact-section-grid {
+  display: grid;
+  gap: 4rem;
   grid-template-columns: 1fr;
 }
 
-.contact-section-title {
-  margin-bottom: 2rem;
+.contact-section-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tbf-gap-lg);
 }
 
 .contact-section-text {
-  margin-bottom: 2.5rem;
   max-width: 28rem;
   line-height: 1.6;
   color: var(--neutral-600);
@@ -58,12 +67,14 @@
 }
 
 .contact-link-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tbf-gap-xs2);
   min-width: 0;
   flex: 1;
 }
 
 .contact-link-label {
-  margin-bottom: 0.25rem;
   overflow-wrap: break-word;
   font-size: 0.625rem;
   font-weight: 900;
@@ -108,7 +119,6 @@
 
 .contact-section-map {
   position: relative;
-  margin-top: 2rem;
   min-height: 360px;
   overflow: hidden;
   background: var(--neutral-100);
@@ -126,12 +136,14 @@
 }
 
 .contact-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tbf-gap-md);
   background: var(--neutral-900);
   padding: 1.5rem;
 }
 
 .contact-panel-title {
-  margin-bottom: 1.5rem;
   overflow-wrap: break-word;
   font-size: 1.125rem;
   font-weight: 900;
@@ -176,8 +188,18 @@
   color: var(--neutral-400);
 }
 
+.contact-panel-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tbf-gap-md);
+}
+
+.contact-panel-address-lines {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-panel-note {
-  margin-top: 1.25rem;
   max-width: 28rem;
   background: var(--primary-500);
   padding: 1rem;
@@ -190,10 +212,10 @@
 .contact-panel-divider {
   border-top: 1px solid var(--neutral-800);
   padding-top: 1rem;
+  padding-bottom: var(--tbf-gap-sm);
 }
 
 .contact-panel-label {
-  margin-bottom: 0.75rem;
   overflow-wrap: break-word;
   font-size: 0.75rem;
   font-weight: 900;
@@ -204,12 +226,16 @@
 }
 
 .contact-panel-operator {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tbf-gap-sm);
   font-size: 0.875rem;
   color: var(--neutral-400);
 }
 
-.contact-panel-legal-row {
-  margin-top: 0.75rem;
+.contact-panel-operator-lines {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 640px) {
@@ -263,7 +289,7 @@
 }
 
 @media (min-width: 1024px) {
-  .contact-section-inner {
+  .contact-section-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

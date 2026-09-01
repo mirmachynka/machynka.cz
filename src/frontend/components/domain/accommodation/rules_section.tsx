@@ -27,7 +27,7 @@ export function AccommodationRulesSection({ intro, tr, title }: RulesSectionProp
     <p className="accommodation-rules-intro">{intro}</p>
     <CardTable
     items={RULE_SECTIONS}
-    className="accommodation-rules-table"
+    itemClassName="accommodation-rules-cell"
     getKey={(section) => section.key}
     renderItem={(section) => (
         <>

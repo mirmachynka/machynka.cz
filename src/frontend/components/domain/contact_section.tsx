@@ -44,11 +44,13 @@ function ContactAddressPanel({ tr }: { tr: I18nTranslator }) {
     <div className="contact-panel-icon">
     <Icon spec={ICON_MAP_PIN} />
     </div>
-    <div>
+    <div className="contact-panel-column">
+    <div className="contact-panel-address-lines">
     <div className="contact-panel-name">{tr("contactSection.label")}</div>
     <div className="contact-panel-detail">{contactInfo.contactAddress.street}</div>
     <div className="contact-panel-detail">
     {contactInfo.contactAddress.postalCode} {contactInfo.contactAddress.city}
+    </div>
     </div>
     <p className="contact-panel-note">{tr("contactSection.receptionNote")}</p>
     </div>
@@ -84,17 +86,21 @@ function ContactOperatorPanel({ tr }: { tr: I18nTranslator }) {
     <Icon spec={ICON_BUILDING} />
     </div>
     <div className="contact-panel-operator">
+    <div className="contact-panel-operator-lines">
     <div className="contact-panel-name">{contactInfo.operator.name}</div>
     <div>{tr("contactSection.representedBy", { name: contactInfo.operator.representedBy })}</div>
     <div>{contactInfo.operator.street}</div>
     <div>
     {contactInfo.operator.city} {contactInfo.operator.postalCode}
     </div>
-    <div className="contact-panel-legal-row">
+    </div>
+    <div className="contact-panel-operator-lines">
+    <div>
     {tr("contactSection.companyId")}: {contactInfo.operator.companyId}
     </div>
     <div>
     {tr("contactSection.taxId")}: {contactInfo.operator.taxId}
+    </div>
     </div>
     </div>
     </div>
@@ -109,13 +115,10 @@ export function ContactSection() {
   return (
     <section id="kontakt" className="contact-section">
     <div className="contact-section-inner">
-    <div>
-    <span className="section-label">{tr("contactSection.label")}</span>
-    <h2 className="section-title contact-section-title">
-    {tr("contactSection.titleTop")}
-    <br />
-    {tr("contactSection.titleBottom")}
-    </h2>
+    <h2 className="section-title contact-section-title">{tr("contactSection.title")}</h2>
+
+    <div className="contact-section-grid">
+    <div className="contact-section-column">
     <p className="contact-section-text">{tr("contactSection.text")}</p>
 
     <ContactLinks tr={tr} />
@@ -137,6 +140,7 @@ export function ContactSection() {
     <span>{tr("contactSection.callNow")}</span>
     <Icon spec={ICON_PHONE} />
     </Button>
+    </div>
     </div>
     </div>
     </section>

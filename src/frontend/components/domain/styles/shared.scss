@@ -1,17 +1,3 @@
-.section-title-light {
-  color: var(--white-500);
-}
-
-.section-label {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  font-size: 0.75rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--primary-500);
-}
-
 .section-title {
   overflow-wrap: break-word;
   font-size: 1.875rem;
@@ -20,6 +6,10 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--neutral-900);
+}
+
+.section-title-light {
+  color: var(--white-500);
 }
 
 @media (min-width: 380px) {

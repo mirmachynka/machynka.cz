@@ -13,14 +13,7 @@ export function AccommodationRooms({ baseKey, roomCount, tr }: RoomsProps) {
   return (
     <section className="accommodation-rooms">
     <div className="accommodation-rooms-inner">
-    <div className="accommodation-rooms-head">
-    <span className="section-label">{tr("accommodationPage.roomsLabel")}</span>
-    <h2 className="section-title">
-    {tr("accommodationPage.roomsTitleTop")}
-    <br />
-    {tr("accommodationPage.roomsTitleBottom")}
-    </h2>
-    </div>
+    <h2 className="section-title">{tr("accommodationPage.roomsTitle")}</h2>
 
     <CardTable
     items={numbers(roomCount)}
@@ -34,8 +27,10 @@ export function AccommodationRooms({ baseKey, roomCount, tr }: RoomsProps) {
         </span>
         <span className="accommodation-room-tag accommodation-room-tag-light">{tr(`${baseKey}.rooms.room${roomNumber}.size`)}</span>
         </div>
+        <div className="accommodation-room-text-group">
         <h3 className="accommodation-room-title">{tr(`${baseKey}.rooms.room${roomNumber}.name`)}</h3>
         <p className="accommodation-room-description">{tr(`${baseKey}.rooms.room${roomNumber}.description`)}</p>
+        </div>
         </>
     )}
     />

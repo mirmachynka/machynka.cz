@@ -22,7 +22,7 @@ export function AccommodationPricePanel({ accommodation, baseKey, priceGroupItem
   const groups = priceGroupItemCounts.map((itemCount, index) => ({ groupNumber: index + 1, itemCount }));
 
   return (
-    <div className="accommodation-panel accommodation-price-panel">
+    <div className="accommodation-panel">
     <Icon spec={ICON_RECEIPT} className="accommodation-panel-icon" />
     <h2 className="accommodation-panel-title">{tr("accommodationPage.priceTitle")}</h2>
     <div className="accommodation-panel-block">
@@ -35,7 +35,7 @@ export function AccommodationPricePanel({ accommodation, baseKey, priceGroupItem
     <CardTable
     items={groups}
     columns={3}
-    className="accommodation-price-table"
+    itemClassName="accommodation-price-cell"
     getKey={(group) => group.groupNumber}
     renderItem={(group) => (
         <>
