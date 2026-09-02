@@ -8,7 +8,7 @@
         "@fontsource/geist": "^5.3.0",
         "@trebired/bundler": "^5.8.2",
         "@trebired/env": "^0.1.2",
-        "@trebired/frontend": "^12.11.1",
+        "@trebired/frontend": "^12.12.3",
         "@trebired/i18n": "^0.5.6",
         "@trebired/logger": "2.5.32",
         "@trebired/startup": "^0.6.1",
@@ -136,7 +136,7 @@
 
     "@trebired/env": ["@trebired/env@0.1.2", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.4.17", "@trebired/utils": "^0.8.0" } }, "sha512-fg12FvuhYhL8pDb5iqIH4x21jpmtKeZRYan0jUGa2e0v/wWPXmcG/wShZeyZeUOAnOt9eVwVtorNC9OWxPELlg=="],
 
-    "@trebired/frontend": ["@trebired/frontend@12.11.1", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.4.18", "@trebired/utils": "^0.8.0", "chart.js": "^4.5.1", "country-flag-icons": "^1.6.20", "cropperjs": "^1.6.2", "react-markdown": "^10.1.0", "rehype-sanitize": "^6.0.0", "remark-gfm": "^4.0.1", "remixicon": "^4.9.1", "simple-icons": "^16.28.0", "socket.io-client": "^4.8.3" }, "peerDependencies": { "react": ">=18", "react-dom": ">=18" }, "optionalPeers": ["react", "react-dom"] }, "sha512-QGr9WYAkw26pkhOCg79CqoTigv+bUsDXLVQyjJswGRksbGmJbA/Qzf56QWISXXVVWnm6o3itgpQ3MaQdhblIuw=="],
+    "@trebired/frontend": ["@trebired/frontend@12.12.3", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.4.18", "@trebired/utils": "^0.8.0", "chart.js": "^4.5.1", "country-flag-icons": "^1.6.20", "cropperjs": "^1.6.2", "react-markdown": "^10.1.0", "rehype-sanitize": "^6.0.0", "remark-gfm": "^4.0.1", "remixicon": "^4.9.1", "simple-icons": "^16.28.0", "socket.io-client": "^4.8.3" }, "peerDependencies": { "react": ">=18", "react-dom": ">=18" }, "optionalPeers": ["react", "react-dom"] }, "sha512-YdyVH6vEDFCQKEK0AEtetREIiQyAXUY8+DoEVvY8/d07TRiB70xt/Iuh94k2RX2/Z23JgZ/lhypWT1prk4Q1Wg=="],
 
     "@trebired/i18n": ["@trebired/i18n@0.5.6", "", { "dependencies": { "@trebired/utils": "^0.8.0", "typescript": "^6.0.3" }, "bin": { "trebired-i18n": "dist/cli.js" } }, "sha512-tmcj/3g3ADwxh3vG8d9AUMd8Exl+6WFy2E9rYTj2SVoMPnKtk1JEAdJn8WCq8bn39FVRHimqJh2e/msL6s3rpg=="],
 

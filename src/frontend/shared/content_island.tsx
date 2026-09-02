@@ -1,20 +1,11 @@
-import { onPageChange, registerPageCleanup } from "@trebired/frontend";
-import type { ReactElement } from "react";
-import { createRoot, hydrateRoot } from "react-dom/client";
+import { mountLiveIsland } from "@trebired/frontend/react";
 
-function mount(elementId: string, render: (path: string) => ReactElement) {
-  const el = document.getElementById(elementId);
-  if (!el) return;
+import { PageContent } from "#iacmuxrimql0";
 
-  const node = render(window.location.pathname);
-  const hasServerContent = el.childNodes.length > 0;
-  const root = hasServerContent ? hydrateRoot(el, node) : createRoot(el);
-  if (!hasServerContent) root.render(node);
-
-  registerPageCleanup(el, () => root.unmount());
+function PageIsland() {
+  return <PageContent path={window.location.pathname} />;
 }
 
-export function mountContentIsland(elementId: string, render: (path: string) => ReactElement) {
-  mount(elementId, render);
-  onPageChange(() => mount(elementId, render));
+export function mountContentIsland(elementId: string) {
+  void mountLiveIsland({ root: elementId, component: PageIsland });
 }

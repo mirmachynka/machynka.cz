@@ -4,6 +4,17 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.1.1
+
+### Trebired packages
+
+- Updated `@trebired/frontend` to 12.12.3 (from 12.11.1), across three collaborative bugfix rounds with the package maintainer: `bindPopstate()` no longer mistakes a same-page hash click for a real navigation, `rehydrate()` no longer races a still-hydrating island's soft-redirect links, `LiveIslandMount`'s `data-live-island-hydrated` guard no longer goes permanently stale when an app points its `rootId` at the SPA's own content selector, and the icon binder now respects the same unhydrated-island guard the other binders already had.
+
+### Navigation
+
+- Fixed the SSR entry never wiring up server-side icon rendering, which shipped every icon as an empty `<i>` element in the server-rendered HTML (invisible until diffed against the client's hydrated output). Server-rendered routes now wrap in `withIconServerRenderer()`, seeded from the same icon spec set the client build uses.
+- Fixed the content island (`content_island.tsx`) reading its route from a JSON state script that only the first page load ever populated; it now reads `window.location.pathname` directly, so it can't go stale after the first soft-navigation.
+
 ## 1.1.0
 
 ### Navigation

@@ -9,7 +9,7 @@ import { interactions, runtime, semantics } from "./theme";
 import { breakpoints, typography } from "./typography";
 
 export default defineConfig({
-    forVersion: "12.11.1",
+    forVersion: "12.12.3",
     assets: {
       fonts: {
         families: {

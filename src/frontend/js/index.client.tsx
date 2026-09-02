@@ -5,7 +5,6 @@ import { hydrateRoot } from "react-dom/client";
 import { Footer } from "#jpydwvtclrzh";
 import { Header } from "#d19rad2krym3";
 import { mountContentIsland } from "#6zkiijbcfna0";
-import { PageContent } from "#iacmuxrimql0";
 import { getLang } from "#vfzpzm3jpkln";
 import { metaFor } from "#y4hpoyu2xriv";
 
@@ -21,7 +20,7 @@ if (footerEl) hydrateRoot(footerEl, <Footer />);
 
 configureSpa({});
 
-mountContentIsland("live_content", (path) => <PageContent path={path} />);
+mountContentIsland("live_content");
 
 function scrollToHash(hash: string) {
   requestAnimationFrame(() => {
