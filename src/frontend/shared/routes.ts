@@ -62,8 +62,13 @@ const NOT_FOUND_META: Record<SupportedLang, RouteMeta> = {
   },
 };
 
+function stripTrailingSlash(path: string): string {
+  return path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+}
+
 export function canonicalPath(path: string): string {
-  return REDIRECTS[path] ?? path;
+  const normalized = stripTrailingSlash(path);
+  return REDIRECTS[normalized] ?? normalized;
 }
 
 export function routeExists(path: string): boolean {

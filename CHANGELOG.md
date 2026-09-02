@@ -4,6 +4,12 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.1.2
+
+### Navigation
+
+- Fixed `canonicalPath()` and `getAccommodationByPath()` matching paths by exact string, with no trailing-slash normalization. A cold load of an accommodation URL arriving with a trailing slash (as several static hosts produce via a redirect) silently missed the route lookup and rendered the home page instead, while the server had correctly rendered the accommodation page — a genuine content mismatch that React's hydration surfaced as a hard error and regenerated the tree client-side. `canonicalPath()` now strips a trailing slash before every lookup.
+
 ## 1.1.1
 
 ### Trebired packages
