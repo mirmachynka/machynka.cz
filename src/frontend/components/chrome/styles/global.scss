@@ -1,0 +1,14 @@
+html {
+  scrollbar-gutter: auto;
+  scrollbar-color: var(--neutral-400) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-400);
+  border-radius: 999px;
+}

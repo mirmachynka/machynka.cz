@@ -27,7 +27,6 @@ export default defineMessages({
     },
     properties: {
       title: "OUR PROPERTIES",
-      detail: "Detail",
       roomsCount: "{{count}} rooms",
     },
     benefits: {

@@ -40,7 +40,6 @@ function PropertyCard({ property, ta, tr }: { property: Accommodation; ta: I18nT
 
     <div className="property-card-footer">
     <span className="property-card-address">{property.address}</span>
-    <span className="property-card-detail">{tr("properties.detail")}</span>
     </div>
     </div>
     </a>

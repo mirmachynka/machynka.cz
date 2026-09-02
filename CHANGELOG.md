@@ -4,6 +4,23 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.1.3
+
+### Appearance
+
+- Removed the "Detail" link from the accommodation cards on the home page. The card is already a link, and the arrow badge on its image carries the same affordance, so the label was redundant.
+- Fixed the "CO NABÍZÍME" cards stacking one per row on phones. They now use a two-column grid there, matching the "CO JE K DISPOZICI" cards, and keep the three-column desktop layout.
+- Fixed a light strip down the right edge of every page. `@trebired/frontend`'s reset sets `scrollbar-gutter: stable` on `html`, which permanently reserves scrollbar-width space that only `html`'s own background paints — so it showed through beside every full-bleed dark section. The site does not use the framework's scroll-locking modal that the reservation exists for, so it is now off, and the scrollbar itself is themed with a transparent track.
+- Moved the language switcher onto the same row as the phone number in the mobile menu, aligned right, instead of below it.
+
+### Navigation
+
+- Fixed the hydration mismatch warnings React logged for the header and footer on every page load. `hydrateRoot()` only schedules hydration, but `bindFrontendRuntime()` ran synchronously at the end of the client entry, stamping `data-tbf-soft-redirect-bound` and `mode="static"` onto the DOM before React committed. Chrome hydration now resolves through `hydrateChromeRoots()`, and the runtime binding plus the content island mount wait for that commit.
+
+### Trebired packages
+
+- Updated `@trebired/frontend` to 12.12.5 and `@trebired/bundler` to 5.9.0. `@trebired/logger` stays pinned to `2.5.32`: `@trebired/bundler` and `@trebired/logger-adapter` still ship a bundled logger config targeting `2.5.26` against a `^2.5.32` range, so unpinning would resolve `2.6.2` and trip the version guard.
+
 ## 1.1.2
 
 ### Navigation

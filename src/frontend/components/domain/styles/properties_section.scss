@@ -180,17 +180,6 @@
   color: var(--neutral-500);
 }
 
-.property-card-detail {
-  font-size: 0.875rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: var(--primary-500);
-}
-
-.property-card-detail:hover {
-  text-decoration: underline;
-}
-
 @media (min-width: 360px) {
   .property-card-footer {
     flex-direction: row;
@@ -214,10 +203,6 @@
 
   .property-card-features {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .property-card-detail {
-    letter-spacing: 0.02em;
   }
 }
 

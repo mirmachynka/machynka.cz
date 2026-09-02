@@ -172,6 +172,9 @@
       "#p1ba2rs26ml3": [
         "../../../src/bin/frontend/ssr.ts"
       ],
+      "#pgsley9n980u": [
+        "../../../src/frontend/shared/chrome_roots.tsx"
+      ],
       "#plsr0hqod53h": [
         "../../../src/frontend/components/chrome/styles/lang_switcher.scss"
       ],
@@ -216,6 +219,9 @@
       ],
       "#xrzcxz8l2q7u": [
         "../../startup/config.ts"
+      ],
+      "#xw2eogmil9kp": [
+        "../../../src/frontend/components/chrome/styles/global.scss"
       ],
       "#y1vl6q0r0wmh": [
         "../../../src/frontend/shared/lang/detect.ts"

@@ -1,26 +1,24 @@
 import { bindFrontendRuntime, configureSpa, onPageChange } from "@trebired/frontend";
 import "@trebired/frontend/static-icons";
-import { hydrateRoot } from "react-dom/client";
 
 import { Footer } from "#jpydwvtclrzh";
 import { Header } from "#d19rad2krym3";
+import { hydrateChromeRoots } from "#pgsley9n980u";
 import { mountContentIsland } from "#6zkiijbcfna0";
 import { getLang } from "#vfzpzm3jpkln";
 import { metaFor } from "#y4hpoyu2xriv";
 
 document.title = metaFor(window.location.pathname, getLang()).title;
 
-const headerEl = document.querySelector("header");
-
-if (headerEl) hydrateRoot(headerEl, <Header />);
-
-const footerEl = document.querySelector("footer");
-
-if (footerEl) hydrateRoot(footerEl, <Footer />);
-
 configureSpa({});
 
-mountContentIsland("live_content");
+void hydrateChromeRoots([
+    [document.querySelector("header"), <Header />],
+    [document.querySelector("footer"), <Footer />],
+]).then(() => {
+    bindFrontendRuntime(document, { icons: { mode: "static" } });
+    mountContentIsland("live_content");
+});
 
 function scrollToHash(hash: string) {
   requestAnimationFrame(() => {
@@ -71,5 +69,3 @@ onPageChange(() => {
 
     scrollToHash(hash);
 });
-
-bindFrontendRuntime(document, { icons: { mode: "static" } });

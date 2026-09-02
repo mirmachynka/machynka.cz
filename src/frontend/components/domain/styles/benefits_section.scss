@@ -72,3 +72,17 @@
     font-size: 1.25rem;
   }
 }
+
+@media (max-width: 767.98px) {
+  .benefits-section-inner .card-table-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-section-inner .card-table-cols-3 .card-table-cell:nth-child(-n + 2) {
+    border-top: none;
+  }
+
+  .benefits-section-inner .card-table-cols-3 .card-table-cell:nth-child(2n) {
+    border-left: 1px solid var(--neutral-800);
+  }
+}

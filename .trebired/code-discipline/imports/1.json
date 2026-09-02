@@ -56,6 +56,7 @@
   "#o5br7b2gfruy": "./src/bin/frontend/shell.ts",
   "#oq3el5biuo0q": "./src/frontend/components/primitives/expandable_image.tsx",
   "#p1ba2rs26ml3": "./src/bin/frontend/ssr.ts",
+  "#pgsley9n980u": "./src/frontend/shared/chrome_roots.tsx",
   "#plsr0hqod53h": "./src/frontend/components/chrome/styles/lang_switcher.scss",
   "#ppwqwx7cdbgx": "./src/frontend/components/domain/accommodation/translator.ts",
   "#q5kbipc4jv50": "./src/frontend/components/chrome/lang_switcher.tsx",
@@ -71,6 +72,7 @@
   "#vgmc3zaakwqc": "./src/frontend/components/domain/accommodation/sections/gallery.tsx",
   "#x3jm3224vb0o": "./src/frontend/components/domain/map_backdrop.tsx",
   "#xrzcxz8l2q7u": "./.trebired/startup/config.ts",
+  "#xw2eogmil9kp": "./src/frontend/components/chrome/styles/global.scss",
   "#y1vl6q0r0wmh": "./src/frontend/shared/lang/detect.ts",
   "#y4hpoyu2xriv": "./src/frontend/shared/routes.ts",
   "#yzchcm24vru9": "./src/frontend/components/domain/about_section.tsx"
