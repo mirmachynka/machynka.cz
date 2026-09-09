@@ -22,6 +22,9 @@
       "#4vj346erflbs": [
         "../../../src/frontend/components/domain/styles/properties_section.scss"
       ],
+      "#52dy5geo53fr": [
+        "../../seo/config.ts"
+      ],
       "#60epvdlo48b2": [
         "../../../src/frontend/components/domain/styles/contact_section.scss"
       ],
@@ -163,9 +166,6 @@
       "#nc704bovl0t8": [
         "../../../src/frontend/components/domain/benefits_section.tsx"
       ],
-      "#o5br7b2gfruy": [
-        "../../../src/bin/frontend/shell.ts"
-      ],
       "#oq3el5biuo0q": [
         "../../../src/frontend/components/primitives/expandable_image.tsx"
       ],
@@ -202,14 +202,17 @@
       "#t42fgwegj1pz": [
         "../../../src/frontend/components/domain/i18n/cs.ts"
       ],
+      "#t9wb9dxoiy82": [
+        "../../../src/bin/frontend/seo.ts"
+      ],
+      "#u9zjrs7575vy": [
+        "../../../src/bin/frontend/options.ts"
+      ],
       "#uzak9m0oqmxp": [
         "../../frontend/systems.ts"
       ],
       "#v7fbc199m6vx": [
         "../../../src/frontend/components/domain/accommodation/sections/about_panel.tsx"
-      ],
-      "#vfzpzm3jpkln": [
-        "../../../src/frontend/shared/lang/store.ts"
       ],
       "#vgmc3zaakwqc": [
         "../../../src/frontend/components/domain/accommodation/sections/gallery.tsx"
@@ -223,14 +226,14 @@
       "#xw2eogmil9kp": [
         "../../../src/frontend/components/chrome/styles/global.scss"
       ],
-      "#y1vl6q0r0wmh": [
-        "../../../src/frontend/shared/lang/detect.ts"
-      ],
       "#y4hpoyu2xriv": [
         "../../../src/frontend/shared/routes.ts"
       ],
       "#yzchcm24vru9": [
         "../../../src/frontend/components/domain/about_section.tsx"
+      ],
+      "#zz37lbnjt359": [
+        "../../../src/frontend/shared/lang/policy.ts"
       ]
     }
   }

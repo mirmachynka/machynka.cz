@@ -62,7 +62,7 @@ The application has no backend. `src/bin/frontend/build.ts` produces the client 
 
 ### Route shells
 
-`src/frontend/shared/routes.ts` is the single route table. It holds the canonical path for every page, the legacy path aliases, and the per-language `title` and `description`. The build reads it through `allRoutePaths()` and `metaFor()` and writes one `index.html` per route so each page ships its own metadata.
+`src/frontend/shared/routes.ts` is the single route table. It holds the canonical path for every page, the legacy path aliases, and the per-language `title` and `description`. The build reads it through `allRoutePaths()` and `metaFor()` and writes one `index.html` per route per locale, so each page ships its own metadata in each language.
 
 ### Colocated translations
 
@@ -76,7 +76,8 @@ Button, popover, palette, icon, and theme values come from `.trebired/frontend/c
 
 | File | Owns |
 | --- | --- |
-| `.trebired/bundler/config.ts` | Entry discovery, SCSS compilation, i18n languages, output directory |
+| `.trebired/bundler/config.ts` | Frontend directory, build output directory, public path |
+| `.trebired/seo/config.ts` | Site URL, locales, locale strategy, robots policy, sitemap defaults |
 | `.trebired/frontend/config.ts` | Palette, semantics, component tokens, systems, fonts, icon mode |
 | `.trebired/startup/config.ts` | Startup messages, port requirement, shutdown timeout |
 | `.trebired/code-discipline/config.ts` | Enforcement presets and banned patterns |
@@ -85,7 +86,7 @@ Button, popover, palette, icon, and theme values come from `.trebired/frontend/c
 
 ## Runtime
 
-Bun runs the build and the dev server. The published output is static HTML, CSS, JavaScript, and assets; the browser is the only runtime the visitor needs. Supported languages are `cs` and `en`, selected in the header and stored in the browser.
+Bun runs the build and the dev server. The published output is static HTML, CSS, JavaScript, and assets; the browser is the only runtime the visitor needs. Czech is served at `/` and English under `/en`, each as its own prerendered document with its own `<html lang>`, title, description, canonical URL, and `hreflang` set. A boot script in the head resolves the visitor's locale before first paint and redirects, so the language is never corrected after the page is visible. `netlify.toml` declares the build command and publish directory, so the host needs no build settings of its own.
 
 ## Documentation
 

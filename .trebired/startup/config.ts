@@ -1,7 +1,7 @@
 import { defineConfig } from "@trebired/startup/config";
 
 export default defineConfig({
-    forVersion: "0.6.0",
+    forVersion: "0.7.1",
     lifecycle: {
       shutdownTimeoutMs: 5000,
     },

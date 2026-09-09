@@ -1,12 +1,18 @@
 #!/usr/bin/env bun
 
-import { buildFrontendApp, buildStaticShell, defineConfig } from "@trebired/bundler/frontend-app";
+import {
+  applyProjectConfigsToFrontendBundlerOptions,
+  buildFrontendApp,
+  buildStaticShell,
+} from "@trebired/bundler/frontend-app";
+import { createLocaleBootScript, localeShellRoutes } from "@trebired/frontend";
 import { createLog } from "@trebired/logger";
 
-import bundlerOptions from "#10mmcc87u9zo";
-import { allRoutePaths, metaFor } from "#y4hpoyu2xriv";
+import { siteDefines } from "./options";
+import { allRoutePaths } from "#y4hpoyu2xriv";
+import { LANG_ROUTING } from "#zz37lbnjt359";
 import { renderRouteBodies } from "./ssr";
-import { withExtraHeadTags } from "./shell";
+import { siteRobotsTxt, siteShellMeta, siteSitemap, siteStructuredData } from "./seo";
 
 const target = (process.argv[2] || "client") as "all" | "client" | "ssr";
 const logger = createLog({
@@ -19,25 +25,34 @@ const logger = createLog({
     source: "machynka-cz",
 });
 
-const config = defineConfig({ ...bundlerOptions, mode: "production" });
+const config = await applyProjectConfigsToFrontendBundlerOptions({
+    define: siteDefines,
+    mode: "production",
+    rootDir: process.cwd(),
+    ssr: false,
+});
 const build = await buildFrontendApp({ ...config, target });
 const routeBodies = await renderRouteBodies();
 
-const routes = allRoutePaths().map((path) => {
-    const meta = metaFor(path, "cs");
-    return { path, body: routeBodies[path], meta: { description: meta.description, title: meta.title } };
-});
+const routes = localeShellRoutes(allRoutePaths(), LANG_ROUTING).map((route) => ({
+      body: `${routeBodies[route.path] || ""}${siteStructuredData(route.sourcePath, process.cwd())}`,
+      meta: { ...siteShellMeta(route.sourcePath, route.locale), lang: route.locale },
+      path: route.path,
+}));
 
 const shell = await buildStaticShell({
     build,
     config,
-    meta: { lang: "cs" },
+    meta: { bootScripts: [createLocaleBootScript(LANG_ROUTING)], lang: "cs" },
     routes,
 });
 
 for (const file of shell.files) {
-  await Bun.write(file.outFile, withExtraHeadTags(file.html));
+  await Bun.write(file.outFile, file.html);
 }
+
+await Bun.write(`${config.clientOutDir}/robots.txt`, siteRobotsTxt());
+await Bun.write(`${config.clientOutDir}/sitemap.xml`, siteSitemap());
 
 logger.success(
   "machynka.build",

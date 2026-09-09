@@ -1,5 +1,7 @@
 import { hasOwn } from "@trebired/utils";
-import { matchSupportedLanguage, type SupportedLang } from "./lang/detect";
+import { matchLocale } from "@trebired/frontend";
+
+import { DEFAULT_LANG, LANG_ROUTING, type SupportedLang } from "./lang/policy";
 
 type RouteMeta = {
   description: string;
@@ -80,6 +82,6 @@ export function allRoutePaths(): string[] {
 }
 
 export function metaFor(path: string, langInput: unknown = "cs"): RouteMeta {
-  const lang = matchSupportedLanguage(langInput) || "cs";
+  const lang = (matchLocale(langInput, LANG_ROUTING) || DEFAULT_LANG) as SupportedLang;
   return ROUTES[canonicalPath(path)]?.[lang] ?? NOT_FOUND_META[lang];
 }

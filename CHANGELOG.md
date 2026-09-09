@@ -4,6 +4,32 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.2.0
+
+### Languages
+
+- Changed language selection from a stored preference applied in the browser to locale-prefixed URLs. Czech is served at `/` and English under `/en`, each as its own prerendered document with its own `<html lang>`, title, description, canonical URL, and `hreflang` set, so both languages are separately indexable. `@trebired/frontend` owns the boot script that resolves the visitor's locale before first paint and the `LocaleProvider` that keeps the server render and hydration in agreement, so the language is no longer corrected after the page is visible.
+- Removed the app-local language wrappers `shared/lang/detect.ts` and `shared/lang/store.ts`. Detection, persistence, and the active locale now come from `@trebired/frontend`; `shared/lang/policy.ts` declares only this site's locale list, labels, and flags.
+
+### SEO
+
+- Added `@trebired/seo` for canonical URLs, `hreflang` alternates, Open Graph and Twitter tags, JSON-LD, `robots.txt`, and `sitemap.xml`, replacing the hand-assembled head tags in the removed `src/bin/frontend/shell.ts`.
+
+### Brand
+
+- Moved the favicons out of `src/frontend/public` into `src/brand` as the single SVG source per colour scheme. `@trebired/frontend` rasterizes them at build time into the ICO and PNG sizes and emits the head links, so no generated icon is committed.
+
+### Deployment
+
+- Added `netlify.toml` declaring `bun run build` and `dist` as the publish directory, so the deploy no longer depends on build settings stored in the host's UI.
+
+### Trebired packages
+
+- Declared `.trebired/bundler/config.ts` through the bundler's own `defineConfig` with a `forVersion`. It was a typed options object at the package config path, so it carried no version and nothing could detect drift against the installed bundler. It now owns `build.clientOutDir` and `build.publicPath`; the application-owned defines and language list moved to `src/bin/frontend/options.ts`.
+- Removed the local `withDirectoryIndexFallback` from the dev server. `@trebired/bundler` 5.12.1 resolves a directory request to its `index.html`, which is what the wrapper existed to do.
+- Updated the Trebired packages to the current fleet: `bundler` 5.13.1, `frontend` 12.15.0, `seo` 0.4.0, `startup` 0.7.1, `i18n` 0.6.1, `code-discipline` 7.2.0, `configs` 0.4.0, `logger` 2.7.1, `utils` 0.9.4, and brought every `.trebired/*` `forVersion` up with them.
+- Updated `@trebired/frontend` to 12.12.7 earlier in this line, fixing a broken dev server and build: the 12.12.5 payload had `dist/config/scss.js` importing `./tones.js` without shipping that file, so every build failed at discovery.
+
 ## 1.1.3
 
 ### Appearance

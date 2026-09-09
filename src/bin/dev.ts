@@ -2,16 +2,23 @@
 
 import path from "node:path";
 
-import { buildFrontendApp, buildStaticShell, createBunStaticAssetHandler, defineConfig } from "@trebired/bundler/frontend-app";
+import {
+  applyProjectConfigsToFrontendBundlerOptions,
+  buildFrontendApp,
+  buildStaticShell,
+  createBunStaticAssetHandler,
+} from "@trebired/bundler/frontend-app";
+import { createLocaleBootScript, localeShellRoutes } from "@trebired/frontend";
 import { readProcessEnvValue } from "@trebired/env";
 import { createLog } from "@trebired/logger";
 import { runStartup } from "@trebired/startup";
 import { readProductIdentity, toPortNumber } from "@trebired/utils";
 
-import bundlerOptions from "#10mmcc87u9zo";
-import { allRoutePaths, metaFor } from "#y4hpoyu2xriv";
+import { LANG_ROUTING } from "#zz37lbnjt359";
+import { siteDefines } from "./frontend/options";
+import { allRoutePaths } from "#y4hpoyu2xriv";
 import { renderRouteBodies } from "./frontend/ssr";
-import { withExtraHeadTags } from "./frontend/shell";
+import { siteShellMeta, siteStructuredData } from "./frontend/seo";
 
 type ServedConfig = Awaited<ReturnType<typeof rebuild>>;
 
@@ -29,51 +36,43 @@ const logger = createLog({
 
 async function rebuild() {
 
-  const config = defineConfig({ ...bundlerOptions, mode: "development" });
+  const config = await applyProjectConfigsToFrontendBundlerOptions({
+      define: siteDefines,
+      mode: "development",
+      rootDir: process.cwd(),
+      ssr: false,
+  });
   const build = await buildFrontendApp({ ...config, target: "client" });
   const routeBodies = await renderRouteBodies();
-  const routes = allRoutePaths().map((route) => {
-      const meta = metaFor(route, "cs");
-      return { path: route, body: routeBodies[route], meta: { description: meta.description, title: meta.title } };
+  const routes = localeShellRoutes(allRoutePaths(), LANG_ROUTING).map((route) => ({
+        body: `${routeBodies[route.path] || ""}${siteStructuredData(route.sourcePath, process.cwd())}`,
+        meta: { ...siteShellMeta(route.sourcePath, route.locale), lang: route.locale },
+        path: route.path,
+  }));
+  const shell = await buildStaticShell({
+      build,
+      config,
+      meta: { bootScripts: [createLocaleBootScript(LANG_ROUTING)], lang: "cs" },
+      routes,
   });
-  const shell = await buildStaticShell({ build, config, meta: { lang: "cs" }, routes });
 
   for (const file of shell.files) {
-    await Bun.write(file.outFile, withExtraHeadTags(file.html));
+    await Bun.write(file.outFile, file.html);
   }
 
   return config;
 }
 
-function withDirectoryIndexFallback(outDirAbs: string, handler: (request: Request) => Promise<Response>) {
-  return async(request: Request): Promise<Response> => {
-    const url = new URL(request.url);
-    if (!path.extname(url.pathname)) {
-      const indexAbs = path.join(outDirAbs, url.pathname, "index.html");
-      if (await Bun.file(indexAbs).exists()) {
-        const rewritten = new URL(url);
-        rewritten.pathname = path.posix.join(url.pathname, "index.html");
-        return handler(new Request(rewritten, request));
-      }
-    }
-    return handler(request);
-  };
-}
-
 function serve(config: ServedConfig) {
-  const outDirAbs = path.resolve(config.rootDir, config.clientOutDir);
   return Bun.serve({
       port,
-      fetch: withDirectoryIndexFallback(
-        outDirAbs,
-        createBunStaticAssetHandler({
-            clientOutDir: config.clientOutDir,
-            mode: "development",
-            publicDir: config.publicDir,
-            rootDir: config.rootDir,
-            spaFallback: "index.html",
-        }),
-      ),
+      fetch: createBunStaticAssetHandler({
+          clientOutDir: String(config.clientOutDir || "dist"),
+          mode: "development",
+          publicDir: typeof config.publicDir === "string" ? config.publicDir : undefined,
+          rootDir: String(config.rootDir || process.cwd()),
+          spaFallback: "index.html",
+      }),
   });
 }
 

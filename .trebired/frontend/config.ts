@@ -9,8 +9,13 @@ import { interactions, runtime, semantics } from "./theme";
 import { breakpoints, typography } from "./typography";
 
 export default defineConfig({
-    forVersion: "12.12.5",
+    forVersion: "12.15.0",
     assets: {
+      favicon: {
+        default: "src/brand/favicon.svg",
+        light: "src/brand/favicon-light.svg",
+        dark: "src/brand/favicon-dark.svg",
+      },
       fonts: {
         families: {
           sans: {

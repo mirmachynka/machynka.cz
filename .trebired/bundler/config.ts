@@ -1,19 +1,13 @@
-import type { BundlerFrontendAppBundlerConfigOptions } from "@trebired/bundler";
-import { readProductIdentity } from "@trebired/utils";
+import { defineConfig } from "@trebired/bundler/config";
 
-const product = readProductIdentity();
-
-const bundlerOptions: Omit<BundlerFrontendAppBundlerConfigOptions, "mode"> = {
-  clientOutDir: "dist",
-  define: {
-    PRODUCT_DISPLAY_NAME: JSON.stringify(product.displayName),
-    PRODUCT_DOMAIN: JSON.stringify(product.domain),
-    PRODUCT_WEBSITE: JSON.stringify(product.website),
-  },
-  publicPath: "/",
-  rootDir: process.cwd(),
-  ssr: false,
-  supportedI18nLanguages: ["cs", "en"],
-};
-
-export default bundlerOptions;
+export default defineConfig({
+    forVersion: "5.13.1",
+    build: {
+      clientOutDir: "dist",
+      publicPath: "/",
+    },
+    frontend: {
+      frontendDir: "src/frontend",
+      publicDir: "src/frontend/public",
+    },
+});

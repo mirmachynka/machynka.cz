@@ -1,9 +1,9 @@
 import { createLocalTranslator } from "@trebired/i18n";
-import { frontendDataAttr, frontendModifierClass } from "@trebired/frontend";
+import { frontendDataAttr, frontendModifierClass, setCurrentLocale } from "@trebired/frontend";
 import { PopoverOpenButton, PopoverPanel } from "@trebired/frontend/react";
 import { useId } from "react";
 
-import { LANGUAGES, setLang } from "#vfzpzm3jpkln";
+import { LANGUAGES } from "./../../shared/lang/policy";
 import { useLang } from "#n99t4onl5ufo";
 
 const TRIGGER_CLASS = `lang-trigger ${frontendModifierClass("button", "chip")}`;
@@ -30,7 +30,7 @@ export function LangSwitcher() {
           aria-selected={lang.code === current}
           className={lang.code === current ? "active" : undefined}
           {...{ [frontendDataAttr("popover-close")]: "" }}
-          onClick={() => setLang(lang.code)}
+          onClick={() => setCurrentLocale(lang.code)}
           >
           <span className={`lang-flag flag:${lang.flag}`} aria-hidden="true" />
           <span>{lang.label}</span>
