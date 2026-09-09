@@ -4,6 +4,10 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.2.1
+
+- Fixed every page throwing `i18n-local-translator-unbound` on hydration. 1.2.0 moved the bundler options into `.trebired/bundler/config.ts`, which sources the supported languages from `.trebired/i18n/config.ts`, and this repo had no such file. The client build therefore ran with no languages and left every `createLocalTranslator()` call unrewritten, while the SSR build kept passing its own list, so the served HTML looked correct and only the browser failed. Added `.trebired/i18n/config.ts` and made it the single source: the SSR render now takes the languages resolved from that config instead of a second list in application code.
+
 ## 1.2.0
 
 ### Languages

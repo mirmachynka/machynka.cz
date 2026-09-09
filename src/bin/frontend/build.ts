@@ -32,7 +32,7 @@ const config = await applyProjectConfigsToFrontendBundlerOptions({
     ssr: false,
 });
 const build = await buildFrontendApp({ ...config, target });
-const routeBodies = await renderRouteBodies();
+const routeBodies = await renderRouteBodies(config.supportedI18nLanguages || []);
 
 const routes = localeShellRoutes(allRoutePaths(), LANG_ROUTING).map((route) => ({
       body: `${routeBodies[route.path] || ""}${siteStructuredData(route.sourcePath, process.cwd())}`,
