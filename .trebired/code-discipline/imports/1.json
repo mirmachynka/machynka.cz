@@ -56,6 +56,7 @@
   "#nc704bovl0t8": "./src/frontend/components/domain/benefits_section.tsx",
   "#oq3el5biuo0q": "./src/frontend/components/primitives/expandable_image.tsx",
   "#p1ba2rs26ml3": "./src/bin/frontend/ssr.ts",
+  "#p1nrhgswrgjy": "./.trebired/i18n/config.ts",
   "#pgsley9n980u": "./src/frontend/shared/chrome_roots.tsx",
   "#plsr0hqod53h": "./src/frontend/components/chrome/styles/lang_switcher.scss",
   "#ppwqwx7cdbgx": "./src/frontend/components/domain/accommodation/translator.ts",

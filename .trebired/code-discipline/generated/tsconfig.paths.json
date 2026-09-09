@@ -172,6 +172,9 @@
       "#p1ba2rs26ml3": [
         "../../../src/bin/frontend/ssr.ts"
       ],
+      "#p1nrhgswrgjy": [
+        "../../i18n/config.ts"
+      ],
       "#pgsley9n980u": [
         "../../../src/frontend/shared/chrome_roots.tsx"
       ],
