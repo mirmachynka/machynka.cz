@@ -1,6 +1,5 @@
+import { ExpandableImage } from "@trebired/frontend/react";
 import type { I18nTranslator } from "@trebired/i18n";
-
-import { ExpandableImage } from "#oq3el5biuo0q";
 
 type GalleryProps = {
   images: string[];

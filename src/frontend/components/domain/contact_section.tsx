@@ -1,8 +1,8 @@
 import { createLocalTranslator, type I18nTranslator } from "@trebired/i18n";
-import { Icon } from "@trebired/frontend/react";
+import { Icon, MapEmbed } from "@trebired/frontend/react";
 
 import { Button } from "#cgroy6iibw7w";
-import { GoogleMapEmbed } from "#47jjzns0wjli";
+
 import { contactInfo, phoneHref } from "#aequr96wfpxz";
 import { ICON_ARROW_RIGHT, ICON_BUILDING, ICON_MAIL, ICON_MAP_PIN, ICON_PHONE } from "#gpkp4b4vfavh";
 import { useLang } from "#n99t4onl5ufo";
@@ -124,7 +124,7 @@ export function ContactSection() {
     <ContactLinks tr={tr} />
 
     <div className="contact-section-map">
-    <GoogleMapEmbed
+    <MapEmbed
     src={contactInfo.contactAddress.mapEmbedUrl}
     className="contact-section-map-frame"
     title={`${tr("contactSection.contactAddress")}: ${contactInfo.contactAddress.street}`}

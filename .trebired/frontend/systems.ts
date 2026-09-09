@@ -2,6 +2,7 @@ import type { FrontendConfig } from "@trebired/frontend/config";
 
 export const systems = {
   icons: true,
+  media: true,
   popover: true,
   primitives: true,
   surface: true,

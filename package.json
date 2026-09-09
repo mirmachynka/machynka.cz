@@ -13,7 +13,7 @@
     }
   },
   "name": "machynka-cz",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "description": "Marketing site for MACHYNKA s.r.o. accommodation in Bu\u010dovice. React frontend, static build, no backend.",
   "type": "module",
   "private": true,
@@ -34,7 +34,7 @@
     "@fontsource/geist": "^5.3.0",
     "@trebired/bundler": "^5.13.1",
     "@trebired/env": "^0.2.1",
-    "@trebired/frontend": "12.15.0",
+    "@trebired/frontend": "12.16.4",
     "@trebired/i18n": "^0.6.1",
     "@trebired/logger": "^2.7.1",
     "@trebired/seo": "^0.4.0",

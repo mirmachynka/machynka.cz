@@ -16,9 +16,6 @@
       "#2ajuusged5jk": [
         "../../../src/frontend/shared/accommodations.ts"
       ],
-      "#47jjzns0wjli": [
-        "../../../src/frontend/components/primitives/google_map_embed.tsx"
-      ],
       "#4vj346erflbs": [
         "../../../src/frontend/components/domain/styles/properties_section.scss"
       ],
@@ -84,9 +81,6 @@
       ],
       "#d8yb63u82y1i": [
         "../../../src/frontend/components/domain/styles/about_section.scss"
-      ],
-      "#dlvr30qrrttz": [
-        "../../../src/frontend/components/primitives/styles/expandable_image.scss"
       ],
       "#e4psc7wgvlyz": [
         "../../frontend/theme.ts"
@@ -165,9 +159,6 @@
       ],
       "#nc704bovl0t8": [
         "../../../src/frontend/components/domain/benefits_section.tsx"
-      ],
-      "#oq3el5biuo0q": [
-        "../../../src/frontend/components/primitives/expandable_image.tsx"
       ],
       "#p1ba2rs26ml3": [
         "../../../src/bin/frontend/ssr.ts"

@@ -4,6 +4,11 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.3.0
+
+- Replaced the local `ExpandableImage` and `GoogleMapEmbed` with the `@trebired/frontend` 12.16 media system and deleted the application copies. The package versions add a portal, a focus trap, focus restore, a reference counted scroll lock and a cleaned close timer, none of which the local implementations had.
+- Enabled the `media` system in `.trebired/frontend/systems.ts`.
+
 ## 1.2.3
 
 - Removed the `frontend ready` boot log from the client entry. It was an application log line duplicated across sites for a milestone the framework does not report, so it told a visitor's console nothing the site owns.
