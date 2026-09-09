@@ -4,6 +4,10 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.2.3
+
+- Removed the `frontend ready` boot log from the client entry. It was an application log line duplicated across sites for a milestone the framework does not report, so it told a visitor's console nothing the site owns.
+
 ## 1.2.2
 
 - Regenerated the Code Discipline alias map for the added `.trebired/i18n/config.ts`. 1.2.1 shipped without it, so `code-discipline check` failed on a fresh clone even though the build succeeded.

@@ -47,5 +47,4 @@ void hydrateChromeRoots([
 ]).then(() => {
     bindFrontendRuntime(document, { icons: { mode: "static" } });
     mountContentIsland("live_content");
-    log.info("boot", "frontend ready");
 });
