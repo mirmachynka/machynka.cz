@@ -9,7 +9,7 @@ export default defineConfig({
       robots: { follow: true, index: true, maxImagePreview: "large" },
       type: "website",
     },
-    localeStrategy: "none",
+    localeStrategy: "prefix",
     robotsTxt: { sitemap: true },
     site: {
       defaultLocale: "cs",

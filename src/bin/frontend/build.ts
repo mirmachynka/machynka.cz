@@ -5,9 +5,10 @@ import {
   buildFrontendApp,
   buildStaticShell,
 } from "@trebired/bundler/frontend-app";
-import { createLocaleBootScript } from "@trebired/frontend";
+import { createLocaleBootScript, createLocaleShellRoutes } from "@trebired/frontend";
 import { createLog } from "@trebired/logger";
 
+import seoConfig from "#52dy5geo53fr";
 import { siteDefines } from "./options";
 import { allRoutePaths } from "#y4hpoyu2xriv";
 import { LANG_ROUTING } from "#zz37lbnjt359";
@@ -34,16 +35,19 @@ const config = await applyProjectConfigsToFrontendBundlerOptions({
 const build = await buildFrontendApp({ ...config, target });
 const routeBodies = await renderRouteBodies(config.supportedI18nLanguages || []);
 
-const routes = allRoutePaths().map((routePath) => ({
-      body: `${routeBodies[routePath] || ""}${siteStructuredData(routePath, process.cwd())}`,
-      meta: { ...siteShellMeta(routePath, LANG_ROUTING.defaultLocale), lang: LANG_ROUTING.defaultLocale },
-      path: routePath,
-}));
+const strategy = seoConfig.localeStrategy;
+const routes = createLocaleShellRoutes({
+    meta: siteShellMeta,
+    paths: allRoutePaths(),
+    render: (routePath, locale) => routeBodies[routePath]?.[locale] || "",
+    routing: LANG_ROUTING,
+    strategy,
+}).map((route) => ({ ...route, body: `${route.body}${siteStructuredData(route.sourcePath, process.cwd())}` }));
 
 const shell = await buildStaticShell({
     build,
     config,
-    meta: { bootScripts: [createLocaleBootScript(LANG_ROUTING)], lang: "cs" },
+    meta: { bootScripts: [createLocaleBootScript(LANG_ROUTING, { strategy })], lang: "cs" },
     routes,
 });
 
