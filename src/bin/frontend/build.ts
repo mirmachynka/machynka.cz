@@ -5,7 +5,7 @@ import {
   buildFrontendApp,
   buildStaticShell,
 } from "@trebired/bundler/frontend-app";
-import { createLocaleBootScript, localeShellRoutes } from "@trebired/frontend";
+import { createLocaleBootScript } from "@trebired/frontend";
 import { createLog } from "@trebired/logger";
 
 import { siteDefines } from "./options";
@@ -34,10 +34,10 @@ const config = await applyProjectConfigsToFrontendBundlerOptions({
 const build = await buildFrontendApp({ ...config, target });
 const routeBodies = await renderRouteBodies(config.supportedI18nLanguages || []);
 
-const routes = localeShellRoutes(allRoutePaths(), LANG_ROUTING).map((route) => ({
-      body: `${routeBodies[route.path] || ""}${siteStructuredData(route.sourcePath, process.cwd())}`,
-      meta: { ...siteShellMeta(route.sourcePath, route.locale), lang: route.locale },
-      path: route.path,
+const routes = allRoutePaths().map((routePath) => ({
+      body: `${routeBodies[routePath] || ""}${siteStructuredData(routePath, process.cwd())}`,
+      meta: { ...siteShellMeta(routePath, LANG_ROUTING.defaultLocale), lang: LANG_ROUTING.defaultLocale },
+      path: routePath,
 }));
 
 const shell = await buildStaticShell({

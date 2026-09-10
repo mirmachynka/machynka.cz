@@ -4,6 +4,11 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.4.0
+
+- Every page serves both languages from one URL again, and switching language no longer reloads. 1.2.0 moved English under `/en` and changed language by navigating there. Each route is now one prerendered document carrying Czech as live markup and English as an inert template; the saved, cookie or browser language is shown before the application bundle runs, and the language menu re-renders the page in place. Moving between pages keeps the chosen language. Built on `@trebired/frontend` 13.0.0.
+- The `/en` URLs are gone and search engines index the Czech pages.
+
 ## 1.3.1
 
 - Fixed the gallery lightbox opening to an empty dark overlay. 1.3.0 moved to the `@trebired/frontend` media system, whose viewer stayed transparent when opened; `@trebired/frontend` 12.17.1 shows it.
