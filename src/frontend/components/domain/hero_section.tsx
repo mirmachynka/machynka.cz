@@ -50,10 +50,6 @@ export function HeroSection() {
     <div className="hero-section-stat-value">2</div>
     <div className="hero-section-stat-label">{tr("hero.stats.objects")}</div>
     </div>
-    <div className="hero-section-stat">
-    <div className="hero-section-stat-value">24/7</div>
-    <div className="hero-section-stat-label">{tr("hero.stats.support")}</div>
-    </div>
     </div>
     </div>
     </div>

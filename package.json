@@ -13,7 +13,7 @@
     }
   },
   "name": "machynka-cz",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Marketing site for MACHYNKA s.r.o. accommodation in Bučovice. React frontend, static build, no backend.",
   "type": "module",
   "private": true,
@@ -34,7 +34,7 @@
     "@fontsource/geist": "^5.3.0",
     "@trebired/bundler": "^5.13.1",
     "@trebired/env": "^0.2.1",
-    "@trebired/frontend": "13.1.2",
+    "@trebired/frontend": "^13.1.13",
     "@trebired/i18n": "^0.6.1",
     "@trebired/logger": "^2.7.1",
     "@trebired/seo": "^0.4.0",
@@ -53,8 +53,5 @@
     "sass": "^1.103.1",
     "sharp": "^0.34.5",
     "typescript": "5.7.3"
-  },
-  "overrides": {
-    "@trebired/logger": "^2.6.2"
   }
 }

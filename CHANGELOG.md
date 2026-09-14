@@ -4,6 +4,14 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.5.0
+
+- Removed the Booking.com buttons from the accommodation hero and price panel, along with their links and copy. Reservations are taken by phone or e-mail only.
+- Removed the 24/7 support figure from the home hero, which was not true. The hero stats now show rooms and properties.
+- The "Rezervovat telefonicky/e-mailem" button on each accommodation page now scrolls to that page's contact details (check-in and check-out, reception address, phone numbers, and location) instead of leaving for the home page contact section.
+- Fixed the favicon staying dark in a dark browser. Chromium took the `.ico`, which cannot follow the color scheme, over the light and dark svg variants. `@trebired/frontend` 13.1.13 serves one adaptive favicon built from both variants.
+- Removed a stale `overrides` entry for `@trebired/logger` that conflicted with the direct dependency and made installs fail.
+
 ## 1.4.0
 
 - Switching language no longer reloads or changes the URL. 1.2.0 changed language by navigating to `/en`. The language menu now re-renders the page in place, the saved language is shown before the application bundle runs, and moving between pages keeps it. Built on `@trebired/frontend` 13.1.2.

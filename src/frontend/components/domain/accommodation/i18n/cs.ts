@@ -4,7 +4,6 @@ export default defineMessages({
     common: {
       backToAccommodation: "Zpět na ubytování",
       reserveRoom: "Rezervovat telefonicky/e-mailem",
-      bookOnBooking: "Rezervovat na Booking.com",
       callForPrice: "Zavolat kvůli ceně",
       accommodationInBucovice: "Ubytování v Bučovicích",
       receptionNote:

@@ -8,7 +8,7 @@
         "@fontsource/geist": "^5.3.0",
         "@trebired/bundler": "^5.13.1",
         "@trebired/env": "^0.2.1",
-        "@trebired/frontend": "13.1.2",
+        "@trebired/frontend": "^13.1.13",
         "@trebired/i18n": "^0.6.1",
         "@trebired/logger": "^2.7.1",
         "@trebired/seo": "^0.4.0",
@@ -29,9 +29,6 @@
         "typescript": "5.7.3",
       },
     },
-  },
-  "overrides": {
-    "@trebired/logger": "^2.6.2",
   },
   "packages": {
     "@bufbuild/protobuf": ["@bufbuild/protobuf@2.14.0", "", {}, "sha512-C3UGsiCwSprE2NKIIFA3hCDlpXTMCAXRZuEVp88L1GY36Y41+rYL5fryE+nOFhp4p4JPQvdV8PQ4DWgHgeTE+w=="],
@@ -190,7 +187,7 @@
 
     "@trebired/env": ["@trebired/env@0.2.1", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.4.19", "@trebired/utils": "^0.9.3" } }, "sha512-9faUbqhYPs4K2LXdK0ScYOYoq2nx2Faj914ngL15a/C8f/Kf2mZwVJkDFz393nXaivc6XoOMQt/1lal8WunEcg=="],
 
-    "@trebired/frontend": ["@trebired/frontend@13.1.2", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.5.1", "@trebired/utils": "^0.9.4", "chart.js": "^4.5.1", "country-flag-icons": "^1.6.20", "cropperjs": "^1.6.2", "react-markdown": "^10.1.0", "rehype-sanitize": "^6.0.0", "remark-gfm": "^4.0.1", "remixicon": "^4.9.1", "simple-icons": "^16.28.0", "socket.io-client": "^4.8.3" }, "peerDependencies": { "react": ">=18", "react-dom": ">=18", "sharp": "^0.34.5" }, "optionalPeers": ["react", "react-dom", "sharp"] }, "sha512-jyc6dF0mXGU0AM2Tr/CiEg2riLztNRFYp+O+n8ARxsizExR9bYJ/RBXSs15/IDet01dtocC4zTzyJ53nSeW+4A=="],
+    "@trebired/frontend": ["@trebired/frontend@13.1.13", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.5.1", "@trebired/utils": "^0.9.4", "chart.js": "^4.5.1", "country-flag-icons": "^1.6.20", "cropperjs": "^1.6.2", "react-markdown": "^10.1.0", "rehype-sanitize": "^6.0.0", "remark-gfm": "^4.0.1", "remixicon": "^4.9.1", "simple-icons": "^16.28.0", "socket.io-client": "^4.8.3" }, "peerDependencies": { "react": ">=18", "react-dom": ">=18", "sharp": "^0.34.5" }, "optionalPeers": ["react", "react-dom", "sharp"] }, "sha512-5uhowCl2EcVZFww+oq3V53apYrKc09b64GlWlGcNQ2LWIk4xiPjW0xdAZBKP/h6nt//RYb3WpK5YFIMtHu1Bzg=="],
 
     "@trebired/i18n": ["@trebired/i18n@0.6.1", "", { "dependencies": { "@trebired/utils": "^0.9.3", "typescript": "^6.0.3" }, "bin": { "trebired-i18n": "dist/cli.js" } }, "sha512-iZtpI9edMgRt6vAPpWvIe3MGpAZAqGqEcbPV0+IEG2QUdKHz0mjZtp29f5wlWl5N0GnV9kDxQU/3RjubRpLeMg=="],
 

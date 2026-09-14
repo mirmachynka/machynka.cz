@@ -28,16 +28,10 @@ export function AccommodationHero({ accommodation, detail, mapAddress, name, tr 
     <h1 className="accommodation-hero-title">{name}</h1>
     <p className="accommodation-hero-detail">{detail}</p>
     <div className="accommodation-hero-actions">
-    <Button href="/#kontakt" variant="primary">
+    <Button href="#kontakt" variant="primary">
     <span>{tr("common.reserveRoom")}</span>
     <Icon spec={ICON_ARROW_RIGHT} />
     </Button>
-    {accommodation.bookingUrl && (
-        <Button href={accommodation.bookingUrl} target="_blank" rel="noreferrer" variant="white">
-        <span>{tr("common.bookOnBooking")}</span>
-        <Icon spec={ICON_ARROW_RIGHT} />
-        </Button>
-    )}
     </div>
     </div>
 

@@ -8,7 +8,6 @@ export type Accommodation = {
     operatorPhone?: string;
     phone: string;
   };
-  bookingUrl?: string;
   exteriorImage: string;
   features: Array<{
     icon: string;
@@ -32,7 +31,6 @@ export const accommodations: Accommodation[] = [
       { icon: ICON_COFFEE, label: "kitchen" },
       { icon: ICON_BATH, label: "bathroom" },
     ],
-    bookingUrl: "https://www.booking.com/hotel/cz/penzion-machynka.html",
     exteriorImage: "/ubytovani/libuse/exterior.jpg",
     galleryImages: [
       "/ubytovani/libuse/1000018756-1-1024x768.jpg",
@@ -60,7 +58,6 @@ export const accommodations: Accommodation[] = [
       { icon: ICON_ACCESSIBILITY, label: "accessibility" },
       { icon: ICON_COFFEE, label: "kitchens" },
     ],
-    bookingUrl: "https://www.booking.com/hotel/cz/penzion-machynka.html",
     exteriorImage: "/ubytovani/penzion/exterior.png",
     galleryImages: [
       "/ubytovani/penzion/apartman_a4_02-768x1024.jpg",

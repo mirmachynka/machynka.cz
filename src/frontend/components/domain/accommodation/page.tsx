@@ -42,7 +42,7 @@ export function AccommodationPage({ accommodation }: AccommodationPageProps) {
 
     <section className="accommodation-info">
     <div className="accommodation-info-inner">
-    <div className="accommodation-info-grid">
+    <div className="accommodation-info-grid" id="kontakt">
     <AccommodationAboutPanel accommodation={accommodation} baseKey={baseKey} description={description} name={name} tr={tr} />
     <AccommodationLocationPanel mapAddress={mapAddress} mapEmbedUrl={accommodation.mapEmbedUrl} name={name} tr={tr} />
     </div>

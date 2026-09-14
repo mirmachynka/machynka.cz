@@ -4,7 +4,7 @@ import type { I18nTranslator } from "@trebired/i18n";
 import { Button } from "#cgroy6iibw7w";
 import { CardTable } from "#gqbmqapv1gar";
 import type { Accommodation } from "#2ajuusged5jk";
-import { ICON_ARROW_RIGHT, ICON_PHONE, ICON_RECEIPT } from "#gpkp4b4vfavh";
+import { ICON_PHONE, ICON_RECEIPT } from "#gpkp4b4vfavh";
 import { phoneHref } from "#aequr96wfpxz";
 import { numbers } from "#m7bw89v4qsjy";
 
@@ -55,12 +55,6 @@ export function AccommodationPricePanel({ accommodation, baseKey, priceGroupItem
     <span>{tr("common.callForPrice")}</span>
     <Icon spec={ICON_PHONE} />
     </Button>
-    {accommodation.bookingUrl && (
-        <Button href={accommodation.bookingUrl} target="_blank" rel="noreferrer" variant="dark">
-        <span>{tr("common.bookOnBooking")}</span>
-        <Icon spec={ICON_ARROW_RIGHT} />
-        </Button>
-    )}
     </div>
     </div>
   );

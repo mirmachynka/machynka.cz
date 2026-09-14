@@ -10,7 +10,6 @@ export default defineMessages({
       stats: {
         objects: "Objekty",
         rooms: "Pokojů",
-        support: "Podpora",
       },
     },
     about: {

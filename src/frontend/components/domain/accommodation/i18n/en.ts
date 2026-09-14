@@ -4,7 +4,6 @@ export default defineMessages({
     common: {
       backToAccommodation: "Back to accommodation",
       reserveRoom: "Book by phone/e-mail",
-      bookOnBooking: "Book on Booking.com",
       callForPrice: "Call for price",
       accommodationInBucovice: "Accommodation in Bučovice",
       receptionNote:
