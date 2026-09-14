@@ -78,7 +78,7 @@ Button, popover, palette, icon, and theme values come from `.trebired/frontend/c
 | --- | --- |
 | `.trebired/bundler/config.ts` | Frontend directory, build output directory, public path |
 | `.trebired/seo/config.ts` | Site URL, locales, locale strategy, robots policy, sitemap defaults |
-| `.trebired/frontend/config.ts` | Palette, semantics, component tokens, systems, fonts, icon mode |
+| `.trebired/frontend/config.ts` | Palette, semantics, component tokens, systems, fonts, icon mode, light and dark favicon |
 | `.trebired/startup/config.ts` | Startup messages, port requirement, shutdown timeout |
 | `.trebired/code-discipline/config.ts` | Enforcement presets and banned patterns |
 
@@ -86,7 +86,7 @@ Button, popover, palette, icon, and theme values come from `.trebired/frontend/c
 
 ## Runtime
 
-Bun runs the build and the dev server. The published output is static HTML, CSS, JavaScript, and assets; the browser is the only runtime the visitor needs. Czech is served at `/` and English under `/en`, each as its own prerendered document with its own `<html lang>`, title, description, canonical URL, and `hreflang` set. A boot script in the head resolves the visitor's locale before first paint and redirects, so the language is never corrected after the page is visible. `netlify.toml` declares the build command and publish directory, so the host needs no build settings of its own.
+Bun runs the build and the dev server. The published output is static HTML, CSS, JavaScript, and assets; the browser is the only runtime the visitor needs. Every page is served from one URL in both languages. The language menu re-renders the page in place without a reload or a URL change, and a boot script in the head applies the visitor's saved language before first paint, so it is never corrected after the page is visible. English documents are also prerendered under `/en` with their own `<html lang>`, title, description, canonical URL, and `hreflang` set, for search engines only; visitors are never sent there. `netlify.toml` declares the build command and publish directory, so the host needs no build settings of its own.
 
 ## Documentation
 
@@ -98,7 +98,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What It Does Not Do
 
-- No booking, reservation, availability, or payment handling.
+- No booking, reservation, availability, or payment handling. Reservations are taken by phone or e-mail.
 - No backend, database, session, or user account.
 - No content management interface. Copy changes are code changes in the colocated `i18n` folders.
 - No analytics, tracking, or cookie consent layer.
