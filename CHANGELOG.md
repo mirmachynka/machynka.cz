@@ -4,6 +4,11 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.5.1
+
+- The language menu takes each language's name from `languageName` in `@trebired/frontend` 13.7.0, which names a language in that language (Čeština, English). The menu read the same before; a language added later is now named correctly without a hand-written label.
+- Moved to `@trebired/logger` 3.0.0. It saves logs to SQLite and needs Bun to save them; this site logs to the console only, so nothing else changes.
+
 ## 1.5.0
 
 - Removed the Booking.com buttons from the accommodation hero and price panel, along with their links and copy. Reservations are taken by phone or e-mail only.

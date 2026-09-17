@@ -1,4 +1,4 @@
-import { normalizeLocaleRouting } from "@trebired/frontend";
+import { languageName, normalizeLocaleRouting } from "@trebired/frontend";
 
 export const SUPPORTED_LANGS = ["cs", "en"] as const;
 
@@ -9,8 +9,8 @@ export type Lang = SupportedLang;
 export const DEFAULT_LANG: SupportedLang = "cs";
 
 export const LANGUAGES: { code: Lang; flag: string; label: string }[] = [
-  { code: "cs", flag: "CZ", label: "Čeština" },
-  { code: "en", flag: "GB", label: "English" },
+  { code: "cs", flag: "CZ", label: languageName("cs") },
+  { code: "en", flag: "GB", label: languageName("en") },
 ];
 
 export const LANG_ROUTING = normalizeLocaleRouting({
