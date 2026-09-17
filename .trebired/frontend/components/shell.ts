@@ -6,7 +6,6 @@ export const shell = {
   header: {
     actionsGap: "1.5rem",
     brand: { logoHeight: "3.5rem" },
-    height: "5rem",
     link: {
       color: token.color("neutral", "500"),
       fontWeight: "700",
