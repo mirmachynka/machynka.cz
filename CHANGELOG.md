@@ -4,6 +4,10 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.6.1
+
+- The menu toggle keeps its 3rem button and 2rem icon, which `@trebired/frontend` 13.8.1 now fixes for every site instead of reading a per-site token.
+
 ## 1.6.0
 
 - The header and its mobile menu come from `SiteHeader` in `@trebired/frontend` 13.8.0 instead of this repository. The header reads the same: the same bar, the same links, the same phone number and language switcher, and the same menu under the toggle. The site now describes the header as a brand, a list of links and the actions beside them, and its look through `components.shell.header` tokens, so the header and the menu behave the same here as on the other sites.

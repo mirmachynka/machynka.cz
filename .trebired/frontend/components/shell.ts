@@ -30,6 +30,5 @@ export const shell = {
       border,
       zIndex: "50",
     },
-    toggle: { iconSize: "2rem", size: "3rem" },
   },
 };
