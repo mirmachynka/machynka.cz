@@ -4,6 +4,10 @@ All notable changes to `machynka-cz` will be documented here.
 
 This project follows semantic versioning once published.
 
+## 1.6.3
+
+- Moved to `@trebired/frontend` 13.11.1, which changes the graph cards this site does not use. The header is unchanged.
+
 ## 1.6.2
 
 - The header keeps its 5rem bar, 3.5rem logo and link sizes, which `@trebired/frontend` 13.9.0 now fixes for every site rather than reading from this repository. Nothing here changes; the other sites match this header.
