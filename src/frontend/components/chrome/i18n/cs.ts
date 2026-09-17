@@ -4,6 +4,10 @@ export default defineMessages({
     lang: {
       label: "Vybrat jazyk",
     },
+    menu: {
+      close: "Zavřít menu",
+      open: "Otevřít menu",
+    },
     nav: {
       accommodation: "Ubytování",
       about: "O nás",

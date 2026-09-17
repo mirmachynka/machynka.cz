@@ -8,7 +8,7 @@
         "@fontsource/geist": "^5.3.0",
         "@trebired/bundler": "^5.13.4",
         "@trebired/env": "^0.2.3",
-        "@trebired/frontend": "^13.7.0",
+        "@trebired/frontend": "^13.8.0",
         "@trebired/i18n": "^0.6.1",
         "@trebired/logger": "^3.0.1",
         "@trebired/seo": "^0.4.2",
@@ -187,7 +187,7 @@
 
     "@trebired/env": ["@trebired/env@0.2.3", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.6.0", "@trebired/utils": "^0.9.3" } }, "sha512-oJmBw12bDcwgu0JAsKSVvib2ObwPc+Laft8/e1wwTkSfiDiWcHVaPPnUdw+3pNi9SGQvuKOaKyjm2YfcGfeDHA=="],
 
-    "@trebired/frontend": ["@trebired/frontend@13.7.0", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.6.0", "@trebired/utils": "^0.9.4", "chart.js": "^4.5.1", "country-flag-icons": "^1.6.20", "cropperjs": "^1.6.2", "react-markdown": "^10.1.0", "rehype-sanitize": "^6.0.0", "remark-gfm": "^4.0.1", "remixicon": "^4.9.1", "simple-icons": "^16.28.0", "socket.io-client": "^4.8.3" }, "peerDependencies": { "react": ">=18", "react-dom": ">=18", "sharp": "^0.34.5" }, "optionalPeers": ["react", "react-dom", "sharp"] }, "sha512-qM4tXSA9F81rpxc6UCZ+r8UJYw71HTMpVr84TBP7ul3lyUFlf8zf8FZnRXrV0JnVzUuoeTsLnAlqdTNm2/Pn/Q=="],
+    "@trebired/frontend": ["@trebired/frontend@13.8.0", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.6.0", "@trebired/utils": "^0.9.4", "chart.js": "^4.5.1", "country-flag-icons": "^1.6.20", "cropperjs": "^1.6.2", "react-markdown": "^10.1.0", "rehype-sanitize": "^6.0.0", "remark-gfm": "^4.0.1", "remixicon": "^4.9.1", "simple-icons": "^16.28.0", "socket.io-client": "^4.8.3" }, "peerDependencies": { "react": ">=18", "react-dom": ">=18", "sharp": "^0.34.5" }, "optionalPeers": ["react", "react-dom", "sharp"] }, "sha512-wSxfZnrvMT7hoJIJTEhboFPRyUNhpmJfTi75AlwuquEOMABdEshh2cSihVILrCt0o8OLl2ymEi5dObjiZI6UkQ=="],
 
     "@trebired/grammar": ["@trebired/grammar@0.2.1", "", { "dependencies": { "@package/logger-adapter": "npm:@trebired/logger-adapter@^0.6.0", "@trebired/utils": "^0.9.4" } }, "sha512-JjAtsMcZT/5knIjSEtHsxo39e8mieGkHKuAV01qg3pjnzJcsS1P1Gf7OOYtDiK6CK9Q4d0fpxVV+JkG9sAuxOQ=="],
 

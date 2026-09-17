@@ -4,6 +4,10 @@ export default defineMessages({
     lang: {
       label: "Select language",
     },
+    menu: {
+      close: "Close menu",
+      open: "Open menu",
+    },
     nav: {
       accommodation: "Accommodation",
       about: "About",

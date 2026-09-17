@@ -66,6 +66,7 @@
   "#t42fgwegj1pz": "./src/frontend/components/domain/i18n/cs.ts",
   "#t9wb9dxoiy82": "./src/bin/frontend/seo.ts",
   "#u9zjrs7575vy": "./src/bin/frontend/options.ts",
+  "#ulbvg8c4lgsc": "./.trebired/frontend/components/shell.ts",
   "#uzak9m0oqmxp": "./.trebired/frontend/systems.ts",
   "#v7fbc199m6vx": "./src/frontend/components/domain/accommodation/sections/about_panel.tsx",
   "#vgmc3zaakwqc": "./src/frontend/components/domain/accommodation/sections/gallery.tsx",

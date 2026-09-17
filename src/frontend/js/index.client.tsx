@@ -2,6 +2,7 @@ import {
   bindFrontendRuntime,
   configureLocaleRouting,
   configureSpa,
+  SITE_HEADER_ROOT_SELECTOR,
 } from "@trebired/frontend";
 import "@trebired/frontend/static-icons";
 import { createBrowserLog } from "@trebired/logger/browser";
@@ -35,7 +36,7 @@ function observed(node: ReactElement) {
 configureSpa({});
 
 void hydrateChromeRoots([
-    [document.querySelector("header"), observed(<Header />)],
+    [document.querySelector(SITE_HEADER_ROOT_SELECTOR), observed(<Header />)],
     [document.querySelector("footer"), observed(<Footer />)],
 ]).then(() => {
     bindFrontendRuntime(document, { icons: { mode: "static" } });
